@@ -14,7 +14,6 @@ ul
 ul li
   list-style: none
 
-
 header
   background: #39a38f
   height: 590px
@@ -28,7 +27,6 @@ header .container
   padding: 80px 0 42px 0
 
 .header__content
-  padding: 0 10px
   position: relative
   flex-direction: row
   font-weight: 900
@@ -85,9 +83,9 @@ header .container
     content: ""
     width: 392px
     height: 85px
-    background: transparent url('../img/rect.png') repeat
+    background: url('../img/rect.png') no-repeat
     z-index: -1
-    right: -107px
+    right: -129px
 .header__text
   font-size: 18px
   position: relative
@@ -108,34 +106,37 @@ header .container
 nav
   display: flex
   justify-content: space-between
-  height: 65px
   align-items: center
 .main__menu
   display: flex
+  align-items: center
   justify-content: space-around
   border-bottom: 1px solid #dfdfdf
-.menu, .main__menu-links ul
+  box-sizing: border-box
+  height: 65px
+.menu, .social-links ul
   display: flex
   justify-content: space-between
-.menu a, .main__menu-links a
+.menu a, .social-links a
   color: #c0c0c0
   &:hover
     color: #000
-.main__menu-links ul
+.social-links
   width: 100px
 
 .menu
   width: 470px
 
 // about
-.clients, .about__lorem, .numbers
+.clients, .about__lorem, .numbers, .services,  .quote, .team-content, .portfolio, .contact
   display: flex
   justify-content: space-around
 .about__lorem
   text-align: center
-  padding-top: 53px
+  padding-top: 55px
   padding-bottom: 75px
-
+.about__heading
+  text-align: center
 .about__heading
   font-size: 45px
   font-weight: 900
@@ -152,7 +153,7 @@ nav
     display: flex
     height: 1px
     position: relative
-    width: 244px
+    width: 108px
     background: #c0c0c0
     top: 13px
     left: 50%
@@ -161,30 +162,40 @@ nav
 .about__description
   display: flex
   justify-content: space-around
-  padding-top: 50px
+  padding-top: 53px
 .about__description p
   font-size: 17px
-  width: 520px
+  width: 620px
+  font-weight: 400
 
 .lorem
-  padding-top: 68px
+  padding-top: 61px
   display: flex
   justify-content: space-between
 .lorem__item
-  width: 220px
+  width: 230px
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
 .lorem__item .lorem__heading
   font-size: 18px
   color: #303030
-  padding-top: 35px
+  padding-top: 25px
   padding-bottom: 27px
 .lorem__item span
   color: #39a38f
 .lorem__item .lorem__description
   color: #707070
   font-size: 13px
-
+  font-weight: 400
+.lorem-icon
+  width: 80px
+  height: 70px
+  display: flex
+  align-items: center
+  justify-content: space-around
 .numbers
-  padding-top: 64px
+  padding-top: 57px
   padding-bottom: 60px
   background: #f0f0f0
   text-align: center
@@ -215,13 +226,311 @@ nav
   color: #fff
   background: #39a38f
   text-align: center
+  padding: 79px 0 75px 0
 .clients .our__clients
   align-items: center
-.clients__heading
+  padding-top: 67px
+.clients__heading, .services__heading, .team__heading, .portfolio__heading, .contact__heading
   font-size: 27px
   font-weight: 900
+  line-height: 27px
 .clients__description
   font-size: 23px
+  position: relative
+  &:after
+    content: ""
+    display: flex
+    height: 1px
+    position: absolute
+    width: 130px
+    background: #fff
+    top: 49px
+    left: 50%
+    transform: translateX(-50%)
+.clients__heart
+  &:after
+    content: ''
+    width: 17px
+    height: 17px
+    display: inline-block
+    background: url("../img/clients__heart.png")
+
+// services
+.services
+  color: #979797
+  padding: 50px 0 63px 0
+.services__item
+  width: 300px
+  display: flex
+
+.services__img
+  width: 60px
+  text-align: center
+
+.about__heading-2, .services__heading, .services__second-heading, .quote__author, .team__heading, .team__second-heading, .portfolio__heading, .portfolio__second-heading, .contact__heading, .contact__second-heading
+  display: flex
+  justify-content: space-around
+.services__heading, .team__heading, .portfolio__heading
+  color: #000
+.services__second-heading, .team__second-heading, .portfolio__second-heading, .contact__second-heading
+  font-size: 21px
+  position: relative
+  padding-top: 7px
+  &:after
+    content: ""
+    position: absolute
+    height: 1px
+    width: 108px
+    background: #d8d8d8
+    bottom: -23px
+.services__item-heading
+  font-size: 18px
+  line-height: 14px
+  color: #000
+  position: relative
+  &:after
+    content: ""
+    display: flex
+    position: absolute
+    height: 1px
+    width: 82px
+    background: #d8d8d8
+    top: 26px
+.services-content
+  padding-top: 85px
+  display: flex
+  justify-content: space-around
+.services-content + .services-content
+  padding-top: 71px
+.services__text
+  padding-left: 24px
+  padding-right: 6px
+  width: 220px
+.services__text span
+  color: #39a38f
+.services__description
+  font-size: 13px
+  padding-top: 31px
+
+// blockquote
+.quote
+  background: #39a38f
+  padding: 78px 0 58px 0
+  color: #fff
+blockquote
+  margin: auto
+  font-size: 21px
+  text-align: center
+  width: 780px
+  padding: 0 90px
+  position: relative
+  &:after, &:before
+    content: '\“'
+    font-size: 179px
+    line-height: 179px
+    position: absolute
+    opacity: .2
+  &:after
+    top: 45px
+  &:before
+    top: -52px
+    left: 42px
+
+.quote__author
+  font-size: 18px
+  padding-top: 42px
+  position: relative
+.quote__author span
+  &:before
+    content: ""
+    height: 1px
+    width: 108px
+    position: absolute
+    background: #fff
+    left: 50%
+    transform: translateX(-50%)
+    top: 24px
+// team
+
+.team, .portfolio
+  padding-top: 60px
+  color: #979797
+.team__top-content
+  display: flex
+  justify-content: space-around
+  padding-bottom: 79px
+.team-content
+  background-color: #f0f0f0
+  padding: 55px 0 74px 0
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: -28px
+    left: 50%
+    margin-left: -28px
+    width: 0
+    height: 0
+    border-bottom: 28px solid #f0f0f0
+    border-left: 28px solid transparent
+    border-right: 28px solid transparent
+.team-content .container
+  display: flex
+  justify-content: space-between
+  position: relative
+
+.team__item
+  width: 300px
+  height: 300px
+  background-color: #39a38f
+  position: relative
+  display: flex
+.team__item-overlay
+  background-color: #fff
+  height: 73px
+  width: 100%
+  position: absolute
+  bottom: 3px
+  display: flex
+  justify-content: space-around
+.team__item-description
+  flex-wrap: wrap
+  padding-top: 15px
+  width: 150px
+.team__name
+  font-size: 18px
+  color: #000
+.team ul
+  padding-top: 15px
+  width: 80px
+  justify-content: space-around
+
+.nav-prev
+  left: -52px
+.nav-next, .nav-prev
+  position: absolute
+  font-size: 42px
+  top: 50%
+  color: #d2d2d2
+  transform: translateY(-50%)
+.nav-next
+  right: -52px
+.nav-indicators
+  position: absolute
+  display: flex
+  bottom: -32px
+  left: 50%
+  transform: translateX(-50%)
+.nav-indicators ul
+  padding: 0
+  display: flex
+  justify-content: space-between
+  width: 90px
+.nav-indicators li
+  height: 10px
+  width: 10px
+  background: #d5d5d5
+  border-radius: 10px
+.nav-indicators .nav-active
+  background: #39a38f
+
+// portfolio
+.portfolio
+  flex-wrap: wrap
+.button-group button
+  background: none
+  border: none
+  color: #959595
+  font-size: 16px
+.button-group
+  width: 500px
+  display: flex
+  justify-content: space-around
+.portfolio__tabs
+  display: flex
+  justify-content: space-around
+.portfolio__top-content
+  padding-bottom: 75px
+.portfolio__item
+  height: 300px
+  width: 300px
+  color: #fff
+  background: #39a38f
+.portfolio-content__part1, .portfolio-content__part2
+  padding-top: 48px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+.portfolio-content__part1 + .portfolio-content__part2
+    padding: 0
+.portfolio-content__part1 .portfolio__item
+  &:nth-child(2n)
+    background: #62c5b2
+.portfolio-content__part2 .portfolio__item
+  &:nth-child(2n+1)
+    background: #62c5b2
+
+.portfolio-clip img
+  height: 47px
+  width: 45px
+  padding-bottom: 20px
+.portfolio-clip
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+.portfolio__item-description
+  width: 180px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+.portfolio__item-description span
+  font-size: 18px
+  font-weight: 900
+
+
+//contact
+.contact
+  padding-top: 65px
+  flex-wrap: wrap
+.contact__second-heading
+  color: #979797
+.contact__top-content
+  padding-bottom: 70px
+.contact__content
+  background: #39a38f
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  width: 100%
+  padding: 145px 0 100px 0
+.contact__text-name
+  background: #fff
+  width: 165px
+  height: 65px
+  box-sizing: border-box
+  display: flex
+  justify-content: space-around
+  align-items: center
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    bottom: -13px
+    left: 50%
+    margin-left: -13px
+    width: 0
+    height: 0
+    border-top: 13px solid #fff
+    border-left: 13px solid transparent
+    border-right: 13px solid transparent
+.contact__text-name span
+  font-size: 30px
+  font-weight: 900
+  &:after
+    content: '.'
+    color: #39a38f
 // media
 @media screen and (min-width: 1200px)
   .container
@@ -229,6 +538,6 @@ nav
 
 @media screen and (max-width: 1200px)
   .container
-    width: 960px
+    width: 940px
 
 

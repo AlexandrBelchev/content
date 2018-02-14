@@ -22,6 +22,7 @@ header
   justify-content: space-between
   flex-direction: column
   color: #fff
+  overflow: hidden
 header .container
   height: 400px
   padding: 80px 0 42px 0
@@ -99,7 +100,7 @@ header .container
 .logo__text
   font-size: 30px
   font-weight: 900
-  color: #000
+  color: #303030
   &:after
     content: "."
     color: #39a38f
@@ -136,10 +137,9 @@ nav
   padding-top: 55px
   padding-bottom: 75px
 .about__heading
-  text-align: center
-.about__heading
   font-size: 45px
   font-weight: 900
+  color: #303030
   &:after
     content: "."
     color: #39a38f
@@ -271,7 +271,7 @@ nav
   display: flex
   justify-content: space-around
 .services__heading, .team__heading, .portfolio__heading
-  color: #000
+  color: #303030
 .services__second-heading, .team__second-heading, .portfolio__second-heading, .contact__second-heading
   font-size: 21px
   position: relative
@@ -286,7 +286,7 @@ nav
 .services__item-heading
   font-size: 18px
   line-height: 14px
-  color: #000
+  color: #303030
   position: relative
   &:after
     content: ""
@@ -402,9 +402,10 @@ blockquote
   color: #000
 .team ul
   padding-top: 15px
-  width: 80px
-  justify-content: space-around
-
+  width: 100px
+  justify-content: flex-end
+.team .social-links li
+  padding: 0 7px
 .nav-prev
   left: -52px
 .nav-next, .nav-prev
@@ -453,16 +454,17 @@ blockquote
   padding-bottom: 75px
 .portfolio__item
   height: 300px
-  width: 300px
+  width: 25%
   color: #fff
   background: #39a38f
 .portfolio-content__part1, .portfolio-content__part2
   padding-top: 48px
   display: flex
+  width: 100%
   flex-wrap: wrap
   justify-content: space-around
 .portfolio-content__part1 + .portfolio-content__part2
-    padding: 0
+  padding: 0
 .portfolio-content__part1 .portfolio__item
   &:nth-child(2n)
     background: #62c5b2
@@ -493,20 +495,33 @@ blockquote
 //contact
 .contact
   padding-top: 65px
+  display: flex
   flex-wrap: wrap
+  justify-content: center
 .contact__second-heading
   color: #979797
 .contact__top-content
   padding-bottom: 70px
-.contact__content
-  background: #39a38f
+.container__text
   display: flex
   flex-wrap: wrap
-  justify-content: space-around
   width: 100%
-  padding: 145px 0 100px 0
+  justify-content: center
+.contact__content
+  background: #39a38f
+  width: 100%
+  padding: 146.5px 0 248.5px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+.contact__heading
+  color: #303030
+.contact .container
+  width: 960px
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
 .contact__text-name
-  background: #fff
   width: 165px
   height: 65px
   box-sizing: border-box
@@ -514,6 +529,7 @@ blockquote
   justify-content: space-around
   align-items: center
   position: relative
+  background: #fff
   &:after
     content: ""
     position: absolute
@@ -528,16 +544,119 @@ blockquote
 .contact__text-name span
   font-size: 30px
   font-weight: 900
+  color: #303030
   &:after
     content: '.'
     color: #39a38f
+.contact__form
+  background: #fff
+  width: 100%
+  padding: 47px 0 46px 50px
+  display: flex
+
+.contact__form-right-part
+  display: flex
+  width: 100%
+  justify-content: space-around
+
+.contact__form-left-part
+  width: 505px
+  display: flex
+.contact__form input, .contact__form textarea
+  border: 1px solid #e2e2e2
+.container-form
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  top: -141px
+.form-group label
+  font-size: 14px
+  color: #464646
+.form-group + .form-group
+  padding-top: 22.5px
+#form
+  width: 505px
+#form input
+  height: 46.5px
+#form textarea
+  height: 201px
+#form input, #form textarea
+  margin-top: 6px
+  width: 100%
+  box-sizing: border-box
+.btn
+  background: #39a38f
+  border: none
+  color: #fff
+  font-size: 14px
+  box-sizing: border-box
+  padding: 14.5px 27.7px
+  font-weight: bold
+  margin-top: 23px
+.contact-label
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding: 0 9px
+  box-sizing: border-box
+.contact-required
+  color: #39a38f
+  font-size: 12px
+.contact__info
+  width: 280px
+.contact__info-contacts
+  display: flex
+  align-items: center
+.contact__icon
+  width: 42px
+.contact__info-text2
+  padding-left: 17px
+.contact__info-contacts + .contact__info-contacts
+  margin-top: 24.5px
+.contact__info-text p
+  color: #898989
+  font-size: 14px
+  margin-top: 25px
+.contact__info-text p + p
+  margin-top: 20px
+.contact__info-info p
+  color: #303030
+  font-size: 18px
+.contact__info-info
+  margin-top: 43px
+.contact__info-heading
+  font-size: 23px
+  color: #303030
+  font-weight: bold
+.contact__bottom-content
+  background: #f0f0f0
+  height: 595px
+  width: 100%
+  position: relative
+
+//footer
+footer
+  background: #d8d8d8
+  display: flex
+  justify-content: center
+  padding: 15.8px 0 15.8px 0
+footer .container
+  align-items: center
+  display: flex
+  justify-content: space-between
+.footer__copyright
+  color: #737373
+.footer-arrow i
+  font-size: 34px
+.footer-arrow i, .footer__social-links i
+  color: #878787
 // media
 @media screen and (min-width: 1200px)
   .container
-    width: 1200px
-
+    width: 1100px
 @media screen and (max-width: 1200px)
   .container
     width: 940px
-
-
+@media screen and (max-width: 1024px)
+  .container
+    width: 760px

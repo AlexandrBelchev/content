@@ -127,6 +127,58 @@ nav
 
 .menu
   width: 470px
+  position: relative
+#menu__hamburger
+  width: 25px
+  height: 18px
+  position: relative
+  display: none
+  z-index: 9999
+#menu__hamburger span
+  height: 4px
+  background: #39a38f
+  width: 25px
+  -webkit-transition: transform 0.3s
+  -o-transition: transform 0.3s
+  transition: transform 0.3s
+  position: absolute
+#menu__hamburger span:nth-child(1)
+  top: 0px
+#menu__hamburger span:nth-child(2)
+  top: 7px
+#menu__hamburger span:nth-child(3)
+  top: 14px
+#menu__hamburger.active
+  transition: all 0.3s ease-in-out
+
+.menu.menu-active
+  padding: 70px 0 0 0
+  background: #c0c0c0
+  position: fixed
+  width: 280px
+  height: 100vh
+  right: 0
+  top: 0
+  display: block
+  z-index: 2
+  text-align: left
+  transform: translateX(0)
+.menu.menu-active li
+  padding: 10px 0
+  border-bottom: 1px solid #39a38f
+.menu.menu-active li a
+  color: #39a38f
+
+#menu__hamburger.active span:nth-child(1),
+#menu__hamburger.active span:nth-child(3)
+  transition-delay: 0.3s
+#menu__hamburger.active span:nth-child(1)
+  transform: rotate(45deg) translateY(10px)
+#menu__hamburger.active span:nth-child(2)
+  opacity: 0
+  transform: scale(0.1)
+#menu__hamburger.active span:nth-child(3)
+  transform: rotate(-45deg) translateY(-10px)
 
 // about
 .clients, .about__lorem, .numbers, .services,  .quote, .team-content, .portfolio, .contact
@@ -254,7 +306,8 @@ nav
     height: 17px
     display: inline-block
     background: url("../img/clients__heart.png")
-
+.client__item img
+  width: 100%
 // services
 .services
   color: #979797
@@ -297,11 +350,12 @@ nav
     background: #d8d8d8
     top: 26px
 .services-content
-  padding-top: 85px
+  padding-top: 14px
   display: flex
+  flex-wrap: wrap
   justify-content: space-around
-.services-content + .services-content
-  padding-top: 71px
+.services__item
+  margin-top: 71px
 .services__text
   padding-left: 24px
   padding-right: 6px
@@ -317,13 +371,16 @@ nav
   background: #39a38f
   padding: 78px 0 58px 0
   color: #fff
+.quote .container
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
 blockquote
-  margin: auto
+  margin: 0
   font-size: 21px
   text-align: center
-  width: 780px
-  padding: 0 90px
   position: relative
+  max-width: 780px
   &:after, &:before
     content: '\“'
     font-size: 179px
@@ -334,9 +391,10 @@ blockquote
     top: 45px
   &:before
     top: -52px
-    left: 42px
+    left: -50px
 
 .quote__author
+  width: 100%
   font-size: 18px
   padding-top: 42px
   position: relative
@@ -650,6 +708,12 @@ footer .container
   font-size: 34px
 .footer-arrow i, .footer__social-links i
   color: #878787
+.footer__social-links li
+  padding: 0 5px
+.footer__copyright, .footer-arrow, .footer__social-links
+  width: 33.33%
+  display: flex
+  justify-content: center
 // media
 @media screen and (min-width: 1200px)
   .container
@@ -657,6 +721,132 @@ footer .container
 @media screen and (max-width: 1200px)
   .container
     width: 940px
-@media screen and (max-width: 1024px)
-  .container
+@media screen and (max-width: 992px)
+  .container, .contact .container
     width: 760px
+  .team__item-overlay
+    padding: 0 10px
+    box-sizing: border-box
+  .team-content .container
+    justify-content: space-around
+  .team__item
+    width: 210px
+    height: 240px
+  .nav-prev
+    left: 0px
+  .nav-next
+    right: 0px
+  .team .social-links ul
+    width: auto
+    padding: 0
+  .team__item .social-links
+    width: 90px
+    display: flex
+    align-items: center
+  .client__item
+    margin: 10px
+  .numbers
+    padding-top: 37px
+    padding-bottom: 40px
+  .number__item
+    padding: 20px 0
+  .lorem
+    flex-wrap: wrap
+    justify-content: center
+  .numbers .container, .clients .our__clients
+    flex-wrap: wrap
+    justify-content: center
+  .contact__form
+    width: 90%
+  .contact__form-left-part
+    width: 300px
+  .contact__content
+    padding: 80px 0 190px 0
+  blockquote
+    max-width: 670px
+@media screen and (max-width: 768px)
+  .container, .contact .container
+    width: 470px
+  .team__item-description
+    padding: 0
+    display: flex
+    align-items: center
+  .header__content-left-part
+    position: relative
+    top: 100px
+  .team__item:nth-child(3n), .menu, nav .social-links
+    display: none
+  #menu__hamburger
+    display: flex
+  .team__item-overlay
+    height: 90px
+  .team__item
+    width: 190px
+    height: 230px
+  .contact__bottom-content
+    height: 1000px
+  .contact__form-left-part
+    width: 100%
+  .contact__info
+    width: 100%
+  .contact__form
+    flex-wrap: wrap
+    padding: 47px 50px
+    width: 75%
+  blockquote
+    padding: 0 32px
+    &:after, &:before
+      font-size: 119px
+      line-height: 119px
+  blockquote
+    &:after
+      top: 138px
+  blockquote
+    &:before
+      left: 51px
+      top: -22px
+@media screen and (max-width: 480px)
+  .container
+    width: 320px
+  .header__title
+    font-size: 78px
+  .header__second-title
+    font-size: 36px
+    line-height: 36px
+  .header__third-title
+    font-size: 24px
+    line-height: 24px
+  .header__content-right-part
+    position: relative
+    top: -15px
+    right: 150px
+  .header__content
+    padding: 0 10px
+  .team__item:nth-child(2n)
+    display: none
+  footer .container
+    padding: 0 10px
+  .about__heading
+    font-size: 36px
+  blockquote, .about__heading-2, .services__second-heading, .team__second-heading, .portfolio__second-heading, .contact__second-heading
+    font-size: 18px
+  .contact__form
+    width: 260px
+    padding: 20px
+  .clients
+    padding: 30px 0
+  blockquote
+    padding: 0 10px
+    &:after, &:before
+      font-size: 119px
+      line-height: 119px
+  blockquote
+    &:after
+      top: 138px
+  blockquote
+    &:before
+      left: 0px
+      top: -28px
+@media screen and (max-width: 320px)
+  .container
+    width: 310px

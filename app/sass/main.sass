@@ -72,7 +72,7 @@ header .container
 .header__content-left-part
   flex-wrap: wrap
   width: 380px
-  height: 250px
+  height: 273px
   display: flex
 .header__content-right-part
   display: flex
@@ -124,9 +124,24 @@ nav
     color: #000
 .social-links
   width: 100px
-
+.menu.menu-active
+  background-color: #fff
+  text-transform: uppercase
+  width: 250px
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 100
+  align-items: center
+  font-size: 18px
+  padding-top: 64px
+  display: none
+  box-shadow: 0 3px 6px rgba(0,0,0,1), 0 3px 6px rgba(0,0,0,0.23)
+.menu.menu-active
+  display: block
 .menu
-  width: 470px
+  width: 474px
   position: relative
 #menu__hamburger
   width: 25px
@@ -149,29 +164,26 @@ nav
 #menu__hamburger span:nth-child(3)
   top: 14px
 #menu__hamburger.active
-  transition: all 0.3s ease-in-out
-
-.menu.menu-active
-  padding: 70px 0 0 0
-  background: #c0c0c0
+  right: 70px
   position: fixed
-  width: 280px
-  height: 100vh
-  right: 0
-  top: 0
-  display: block
-  z-index: 2
-  text-align: left
-  transform: translateX(0)
+  top: 25px
+  right: 200px
+
 .menu.menu-active li
-  padding: 10px 0
   border-bottom: 1px solid #39a38f
+.menu.menu-active li:first-child
+  border-top: 1px solid #39a38f
 .menu.menu-active li a
   color: #39a38f
+  display: flex
+  width: 100%
+  justify-content: center
+  align-items: center
+  height: 45px
+  &:hover
+    color: #fff
+    background: #39a38f
 
-#menu__hamburger.active span:nth-child(1),
-#menu__hamburger.active span:nth-child(3)
-  transition-delay: 0.3s
 #menu__hamburger.active span:nth-child(1)
   transform: rotate(45deg) translateY(10px)
 #menu__hamburger.active span:nth-child(2)
@@ -225,7 +237,7 @@ nav
   display: flex
   justify-content: space-between
 .lorem__item
-  width: 230px
+  width: 208px
   display: flex
   justify-content: space-around
   flex-wrap: wrap
@@ -311,7 +323,7 @@ nav
 // services
 .services
   color: #979797
-  padding: 50px 0 63px 0
+  padding: 50px 0 62px 0
 .services__item
   width: 300px
   display: flex
@@ -323,6 +335,7 @@ nav
 .about__heading-2, .services__heading, .services__second-heading, .quote__author, .team__heading, .team__second-heading, .portfolio__heading, .portfolio__second-heading, .contact__heading, .contact__second-heading
   display: flex
   justify-content: space-around
+  text-align: center
 .services__heading, .team__heading, .portfolio__heading
   color: #303030
 .services__second-heading, .team__second-heading, .portfolio__second-heading, .contact__second-heading
@@ -369,7 +382,7 @@ nav
 // blockquote
 .quote
   background: #39a38f
-  padding: 78px 0 58px 0
+  padding: 74px 0 58px 0
   color: #fff
 .quote .container
   display: flex
@@ -389,6 +402,7 @@ blockquote
     opacity: .2
   &:after
     top: 45px
+    right: 84px
   &:before
     top: -52px
     left: -50px
@@ -396,7 +410,7 @@ blockquote
 .quote__author
   width: 100%
   font-size: 18px
-  padding-top: 42px
+  padding-top: 44px
   position: relative
 .quote__author span
   &:before
@@ -411,7 +425,7 @@ blockquote
 // team
 
 .team, .portfolio
-  padding-top: 60px
+  padding-top: 57px
   color: #979797
 .team__top-content
   display: flex
@@ -454,6 +468,7 @@ blockquote
 .team__item-description
   flex-wrap: wrap
   padding-top: 15px
+  padding-left: 15px
   width: 150px
 .team__name
   font-size: 18px
@@ -464,6 +479,8 @@ blockquote
   justify-content: flex-end
 .team .social-links li
   padding: 0 7px
+.team .social-links
+  padding-right: 7px
 .nav-prev
   left: -52px
 .nav-next, .nav-prev
@@ -552,7 +569,7 @@ blockquote
 
 //contact
 .contact
-  padding-top: 65px
+  padding-top: 63px
   display: flex
   flex-wrap: wrap
   justify-content: center
@@ -609,13 +626,14 @@ blockquote
 .contact__form
   background: #fff
   width: 100%
-  padding: 47px 0 46px 50px
+  padding: 42px 0 46px 50px
   display: flex
 
 .contact__form-right-part
   display: flex
   width: 100%
   justify-content: space-around
+  margin-left: 20px
 
 .contact__form-left-part
   width: 505px
@@ -631,7 +649,7 @@ blockquote
   font-size: 14px
   color: #464646
 .form-group + .form-group
-  padding-top: 22.5px
+  padding-top: 18px
 #form
   width: 505px
 #form input
@@ -648,9 +666,9 @@ blockquote
   color: #fff
   font-size: 14px
   box-sizing: border-box
-  padding: 14.5px 27.7px
+  padding: 15px 27.9px
   font-weight: bold
-  margin-top: 23px
+  margin-top: 27px
 .contact-label
   display: flex
   justify-content: space-between
@@ -662,6 +680,7 @@ blockquote
   font-size: 12px
 .contact__info
   width: 280px
+  padding-top: 3px
 .contact__info-contacts
   display: flex
   align-items: center
@@ -670,18 +689,19 @@ blockquote
 .contact__info-text2
   padding-left: 17px
 .contact__info-contacts + .contact__info-contacts
-  margin-top: 24.5px
+  margin-top: 22px
 .contact__info-text p
   color: #898989
   font-size: 14px
-  margin-top: 25px
+  margin-top: 22px
 .contact__info-text p + p
-  margin-top: 20px
+  margin-top: 23px
 .contact__info-info p
   color: #303030
   font-size: 18px
 .contact__info-info
   margin-top: 43px
+  padding-left: 10px
 .contact__info-heading
   font-size: 23px
   color: #303030
@@ -704,23 +724,36 @@ footer .container
   justify-content: space-between
 .footer__copyright
   color: #737373
+  font-size: 15px
 .footer-arrow i
-  font-size: 34px
+  font-size: 38px
 .footer-arrow i, .footer__social-links i
   color: #878787
 .footer__social-links li
-  padding: 0 5px
+  padding: 0 8.5px
+.footer__social-links
+  justify-content: flex-end
+.footer-arrow
+  justify-content: center
 .footer__copyright, .footer-arrow, .footer__social-links
   width: 33.33%
   display: flex
-  justify-content: center
 // media
 @media screen and (min-width: 1200px)
   .container
     width: 1100px
+  .nav-next
+    right: -40px
+  .nav-prev
+    left: -40px
 @media screen and (max-width: 1200px)
   .container
     width: 940px
+@media screen and (max-width: 1199px)
+  .nav-prev
+    left: -20px
+  .nav-next
+    right: -20px
 @media screen and (max-width: 992px)
   .container, .contact .container
     width: 760px
@@ -753,6 +786,8 @@ footer .container
   .lorem
     flex-wrap: wrap
     justify-content: center
+  .lorem__item
+    padding: 0 10px
   .numbers .container, .clients .our__clients
     flex-wrap: wrap
     justify-content: center
@@ -764,6 +799,8 @@ footer .container
     padding: 80px 0 190px 0
   blockquote
     max-width: 670px
+    &:after
+      right: -20px
 @media screen and (max-width: 768px)
   .container, .contact .container
     width: 470px
@@ -778,6 +815,13 @@ footer .container
     display: none
   #menu__hamburger
     display: flex
+  .portfolio__item
+    height: 160px
+  .portfolio__item-description span
+    font-size: 16px
+  .portfolio-clip img
+    height: 37px
+    width: 35px
   .team__item-overlay
     height: 90px
   .team__item
@@ -801,12 +845,13 @@ footer .container
   blockquote
     &:after
       top: 138px
+      right: 130px
   blockquote
     &:before
       left: 51px
       top: -22px
 @media screen and (max-width: 480px)
-  .container
+  .container, .contact .container
     width: 320px
   .header__title
     font-size: 78px
@@ -826,6 +871,10 @@ footer .container
     display: none
   footer .container
     padding: 0 10px
+    flex-wrap: wrap
+  .footer__copyright, .footer-arrow, .footer__social-links
+    width: 100%
+    justify-content: center
   .about__heading
     font-size: 36px
   blockquote, .about__heading-2, .services__second-heading, .team__second-heading, .portfolio__second-heading, .contact__second-heading
@@ -843,6 +892,7 @@ footer .container
   blockquote
     &:after
       top: 138px
+      right: 60px
   blockquote
     &:before
       left: 0px

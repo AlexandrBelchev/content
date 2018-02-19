@@ -10,7 +10,8 @@ var gulp       = require('gulp'), // Подключаем Gulp
     pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
-
+    njkRender    = require('gulp-nunjucks-render'),
+    prettify     = require('gulp-html-prettify');
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.sass') // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
@@ -27,7 +28,14 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
         notify: false // Отключаем уведомления
     });
 });
-
+gulp.task('nunjucks', function() {
+    return gulp.src('./*.njk')
+        .pipe(njkRender())
+        .pipe(prettify({
+            indent_size : 4 // размер отступа - 4 пробела
+        })
+            .pipe(gulp.dest('./')));
+});
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
@@ -45,10 +53,11 @@ gulp.task('css-libs', ['sass'], function() {
         .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'css-libs', 'scripts', 'nunjucks'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']); // Наблюдение за sass файлами в папке sass
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
+    gulp.watch('./**/*.njk', ['nunjucks']);
 });
 
 gulp.task('clean', function() {

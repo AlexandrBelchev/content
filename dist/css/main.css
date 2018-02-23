@@ -455,6 +455,7 @@ nav {
   content: '';
   width: 17px;
   height: 17px;
+  margin: 0 5px;
   display: inline-block;
   background: url("../img/clients__heart.png"); }
 
@@ -626,7 +627,6 @@ blockquote {
 
 .team ul {
   padding-top: 15px;
-  width: 100px;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
@@ -636,7 +636,15 @@ blockquote {
   padding: 0 7px; }
 
 .team .social-links {
-  padding-right: 7px; }
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .nav-prev {
   left: -52px; }
@@ -717,6 +725,12 @@ blockquote {
 
 .portfolio-content__part2 .portfolio__item:nth-child(2n+1) {
   background: #62c5b2; }
+
+.portfolio__tabs .button-group {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0 15px; }
 
 .portfolio-clip img {
   height: 47px;
@@ -1051,6 +1065,8 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
 @media screen and (max-width: 992px) {
   .container, .contact .container {
     width: 760px; }
+  .header__content {
+    margin: 0 10px; }
   .team__item-overlay {
     padding: 0 10px;
     -webkit-box-sizing: border-box;
@@ -1180,6 +1196,11 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
     left: 51px;
     top: -22px; } }
 
+@media screen and (max-width: 500px) {
+  .header__content-right-part {
+    right: 20px;
+    position: relative; } }
+
 @media screen and (max-width: 480px) {
   .container, .contact .container {
     width: 320px; }
@@ -1194,9 +1215,21 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
   .header__content-right-part {
     position: relative;
     top: -15px;
-    right: 150px; }
+    right: 190px; }
   .header__content {
     padding: 0 10px; }
+  .services__item {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    text-align: center; }
+  .services__item-heading:after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .services__img, .services__text {
+    width: 100%; }
   .team__item:nth-child(2n) {
     display: none; }
   footer .container {

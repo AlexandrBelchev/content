@@ -1,63 +1,370 @@
 doctype html
-head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='initial-scale=1.0, width=device-width')
-    meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    meta(name='description' content='Roran psd template by LunarTemplates. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
-  vulputate, vehicula nisi vitae, lobortis ante.')
-    meta(name='msapplication-config' content='browserconfig.xml')
-    meta(name='title' content='Roran template')
-    meta(name='keywords' content='Roran, ronan, rorran')
-    meta(name='og:title' content='Roran template')
-    meta(name='og:description' content='Roran psd template by LunarTemplates. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
-  vulputate, vehicula nisi vitae, lobortis ante.')
-    link(rel='icon' type='image/png' sizes='16x16' href='img/favicon-16x16.png')
-    link(rel='apple-touch-icon' sizes='180x180' href='img/apple-icon-180x180.png')
-    link(rel='stylesheet' href='css/main.css')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i' rel='stylesheet')
-    link(href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-    title Roran template
-body
-    header
-        .container
-            .header__content
-                .header__content-left-part
-                    h1.header__title Roran
-                    span.header__second-title psd template
-                    span.header__third-title By LunarTemplates
-                    span.header__link www.lunartemplates.com
-                .header__content-right-part
-                    span.header__text
-                        | Free to download
-                        br
-                        | at lunartemplates.com
-            .main-arrow
-                a(href='.about')
-                    img(src='img/arrow3.png' alt='')
-    section#main__menu.main__menu
-        .container
-            nav
-                .logo
-                    a.logo__text(href='') Roran
-                a#menu__hamburger(href='#main__menu')
-                    span
-                    span
-                    span
-                ul#menu.menu
-                    li
-                        a(href='header') Home
-                    li
-                        a(href='.about') About
-                    li
-                        a(href='.services') Services
-                    li
-                        a(href='.team') Team
-                    li
-                        a(href='.portfolio') Portfolio
-                    li
-                        a(href='.contact') Contact
-                .social-links
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='initial-scale=1.0, width=device-width')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        meta(name='description' content='Roran psd template by LunarTemplates. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+      vulputate, vehicula nisi vitae, lobortis ante.')
+        meta(name='msapplication-config' content='browserconfig.xml')
+        meta(name='title' content='Roran template')
+        meta(name='keywords' content='Roran, ronan, rorran')
+        meta(name='og:title' content='Roran template')
+        meta(name='og:description' content='Roran psd template by LunarTemplates. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+      vulputate, vehicula nisi vitae, lobortis ante.')
+        link(rel='icon' type='image/png' sizes='16x16' href='img/favicon-16x16.png')
+        link(rel='apple-touch-icon' sizes='180x180' href='img/apple-icon-180x180.png')
+        link(rel='stylesheet' href='css/main.css')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i' rel='stylesheet')
+        link(href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        title Roran template
+    body
+        header
+            .container
+                .header__content
+                    .header__content-left-part
+                        h1.header__title Roran
+                        span.header__second-title psd template
+                        span.header__third-title By LunarTemplates
+                        span.header__link www.lunartemplates.com
+                    .header__content-right-part
+                        span.header__text
+                            | Free to download
+                            br
+                            | at lunartemplates.com
+                .main-arrow
+                    a(href='.about')
+                        img(src='img/arrow3.png' alt='')
+        section#main__menu.main__menu
+            .container
+                nav
+                    .logo
+                        a.logo__text(href='') Roran
+                    a#menu__hamburger(href='#main__menu')
+                        span
+                        span
+                        span
+                    ul#menu.menu
+                        li
+                            a(href='header') Home
+                        li
+                            a(href='.about') About
+                        li
+                            a(href='.services') Services
+                        li
+                            a(href='.team') Team
+                        li
+                            a(href='.portfolio') Portfolio
+                        li
+                            a(href='.contact') Contact
+                    .social-links
+                        ul
+                            li
+                                a(href='')
+                                    i.fab.fa-linkedin-in
+                            li
+                                a(href='')
+                                    i.fab.fa-pinterest-p
+                            li
+                                a(href='')
+                                    i.fab.fa-twitter
+                            li
+                                a(href='')
+                                    i.fab.fa-facebook-f
+        section.about
+            .about__lorem
+                .container
+                    .about__heading
+                        h2 About Roran
+                    .about__heading-2
+                        span Creative Studio
+                    .about__description
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            br
+                            | vulputate, vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies
+                    .lorem
+                        .lorem__item
+                            - var lorem="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante."
+                            .lorem-icon
+                                img(src='img/lorem-icon1.png' alt='')
+                            p.lorem__heading Some fancy
+                                span  colors
+                            p.lorem__description #{lorem}
+                        .lorem__item
+                            .lorem-icon
+                                img(src='img/lorem-icon2.png' alt='')
+                            p.lorem__heading Enough
+                                span  coffee breaks
+                            p.lorem__description #{lorem}
+                        .lorem__item
+                            .lorem-icon
+                                img(src='img/lorem-icon3.png' alt='')
+                            p.lorem__heading A little bit of
+                                span  magic
+                            p.lorem__description #{lorem}
+            .numbers
+                .container
+                    .number__item
+                        .number__img
+                            img(src='img/number-icon1.png' alt='')
+                        .number__description
+                            span 1085
+                            p Empty cups
+                    .number__item
+                        .number__img
+                            img(src='img/number-icon2.png' alt='')
+                        .number__description
+                            span 102
+                            p Happy clients
+                    .number__item
+                        .number__img
+                            img(src='img/number-icon3.png' alt='')
+                        .number__description
+                            span 25
+                            p BBQ meetings
+                    .number__item
+                        .number__img
+                            img(src='img/number-icon4.png' alt='')
+                        .number__description
+                            span 29
+                            p Cocktail parties
+            .clients
+                .container
+                    .clients__heading
+                        h2.heading Some of our clients
+                    .clients__description
+                        span.clients__heart We
+                        span every single one
+                    .our__clients
+                        .client__item
+                            img(src='img/clients-icon1.png' alt='Mashable')
+                        .client__item
+                            img(src='img/clients-icon2.png' alt='Jquery')
+                        .client__item
+                            img(src='img/clients-icon3.png' alt='LunarTemplate')
+                        .client__item
+                            img(src='img/clients-icon4.png' alt='vhclesign')
+        section.services
+            .container
+                .services__heading
+                    h2.heading Our Services
+                .services__second-heading
+                    span With Passion &amp; Experience
+                .services-content
+                    .services__item
+                        .services__img
+                            img(src='img/services-icon1.png' alt='')
+                        .services__text
+                            - var lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante."
+                            - var services_item_heading="Dictum tincidunt"
+                            p.services__item-heading #{services_item_heading}
+                                span  diam
+                            p.services__description #{lorem_ipsum}
+                    .services__item
+                        .services__img
+                            img(src='img/services-icon2.png' alt='')
+                        .services__text
+                            p.services__item-heading #{services_item_heading}
+                                span  diam
+                            p.services__description #{lorem_ipsum}
+                    .services__item
+                        .services__img
+                            img(src='img/services-icon3.png' alt='')
+                        .services__text
+                            p.services__item-heading #{services_item_heading}
+                                span  diam
+                            p.services__description #{lorem_ipsum}
+                    .services__item
+                        .services__img
+                            img(src='img/services-icon4.png' alt='')
+                        .services__text
+                            p.services__item-heading #{services_item_heading}
+                                span  diam
+                            p.services__description #{lorem_ipsum}
+                    .services__item
+                        .services__img
+                            img(src='img/services-icon5.png' alt='')
+                        .services__text
+                            p.services__item-heading #{services_item_heading}
+                                span  diam
+                            p.services__description #{lorem_ipsum}
+                    .services__item
+                        .services__img
+                            img(src='img/services-icon6.png' alt='')
+                        .services__text
+                            p.services__item-heading #{services_item_heading}
+                                span  diam
+                            p.services__description #{lorem_ipsum}
+        section.quote
+            .container
+                blockquote
+                    | Lorem ipsum dolor sit amet,
+                    b  consectetur adipiscing
+                    |  elit. Integer at purus vulputate,
+                    b  vehicula
+                    |  nisi vitae, lobortis ante. Praesent sodales iaculis ultricies. Vestibulum et
+                    b  tristique
+                    |  nisl, sed volutpat ante.
+                .quote__author
+                    span Jonathan Doe
+        section.team
+            .team__top-content
+                .container
+                    .team__heading
+                        h2.heading Meet...the team
+                    .team__second-heading
+                        span They are really nice!
+            .team-content
+                .container
+                    .nav-prev
+                        i.fas.fa-angle-left
+                    .nav-next
+                        i.fas.fa-angle-right
+                    .nav-indicators
+                        ul
+                            li
+                            li.nav-active
+                            li
+                            li
+                            li
+                    .team__item
+                        .team__item-overlay
+                            .team__item-description
+                                span.team__name Jonathan Doe
+                                span.team__position  Creative Director
+                            .social-links
+                                ul
+                                    li
+                                        a(href='')
+                                            i.fab.fa-twitter
+                                    li
+                                        a(href='')
+                                            i.fab.fa-facebook-f
+                    .team__item
+                        .team__item-overlay
+                            .team__item-description
+                                span.team__name Jaden Doe
+                                span.team__position  Mastermind
+                            .social-links
+                                ul
+                                    li
+                                        a(href='')
+                                            i.fab.fa-twitter
+                                    li
+                                        a(href='')
+                                            i.fab.fa-facebook-f
+                    .team__item
+                        .team__item-overlay
+                            .team__item-description
+                                span.team__name Mister Doe
+                                span.team__position  Designer
+                            .social-links
+                                ul
+                                    li
+                                        a(href='')
+                                            i.fab.fa-twitter
+                                    li
+                                        a(href='')
+                                            i.fab.fa-facebook-f
+        section.portfolio
+            .container
+                .portfolio__top-content
+                    .portfolio__heading
+                        h2.heading Portfolio
+                    .portfolio__second-heading
+                        span This is what we&rsquo;ve been working on
+                .portfolio__tabs
+                    .button-group
+                        button Web
+                        button Digital Art
+                        button Illustrations
+                        button Branding
+                        button All
+            .portfolio-content__part1
+                .portfolio__item
+                .portfolio__item
+                .portfolio__item
+                .portfolio__item
+            .portfolio-content__part2
+                .portfolio__item
+                .portfolio__item.portfolio-clip
+                    .portfolio__item-description
+                        img(src='img/portfolio-icon1.png' alt='')
+                        span Free Website PSD
+                        p Web
+                .portfolio__item
+                .portfolio__item
+        section.contact
+            .container
+                .contact__top-content
+                    .contact__heading
+                        h2.heading Contact
+                    .contact__second-heading
+                        span We would really love to hear from you!
+            .contact__content
+                .container__text
+                    .contact__text-name
+                        span Roran
+            .contact__bottom-content
+                .container.container-form
+                    .contact__form
+                        .contact__form-left-part
+                            form#form(action='POST')
+                                .form-group
+                                    .contact-label
+                                        label(for='first-name') Your Name
+                                        span.contact-required required
+                                    input#first-name(type='text' name="first-name")
+                                .form-group
+                                    .contact-label
+                                        label(for='email') Your email
+                                        span.contact-required required
+                                    input#email(type='email' name="email")
+                                .form-group
+                                    .contact-label
+                                        label(for='subject') Subject
+                                    input#subject(type='text' name="subject")
+                                .form-group
+                                    .contact-label
+                                        label(for='message') Message
+                                        span.contact-required required
+                                    textarea#message(rows='6' name="message")
+                                button.btn(type='submit') Send
+                        .contact__form-right-part
+                            .contact__info
+                                span.contact__info-heading Contactinfo
+                                .contact__info-text
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate.
+                                    p Vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies.
+                                .contact__info-info
+                                    .contact__info-address.contact__info-contacts
+                                        .contact__icon
+                                            img(src='img/contact-icon1.png' alt='')
+                                        .contact__info-text2
+                                            p Rue de Halle 245
+                                            p 1000 Brussels
+                                    .contact__info-telephone.contact__info-contacts
+                                        .contact__icon
+                                            img(src='img/contact-icon2.png' alt='')
+                                        .contact__info-text2
+                                            p 03 123 45 67
+                                            p 0412 345 678
+                                    .contact__info-email.contact__info-contacts
+                                        .contact__icon
+                                            img(src='img/contact-icon3.png' alt='')
+                                        .contact__info-text2
+                                            p info@roran.com
+                                            p question@roran.com
+        footer
+            .container
+                .footer__copyright
+                    p &copy; 2014 Roran. All rights reserved
+                .footer-arrow
+                    a(href='header')
+                        i.fas.fa-angle-up
+                .footer__social-links.social-links
                     ul
                         li
                             a(href='')
@@ -71,310 +378,4 @@ body
                         li
                             a(href='')
                                 i.fab.fa-facebook-f
-    section.about
-        .about__lorem
-            .container
-                .about__heading
-                    h2 About Roran
-                .about__heading-2
-                    span Creative Studio
-                .about__description
-                    p
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        br
-                        | vulputate, vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies
-                .lorem
-                    .lorem__item
-                        - var lorem="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante."
-                        .lorem-icon
-                            img(src='img/lorem-icon1.png' alt='')
-                        p.lorem__heading Some fancy
-                            span  colors
-                        p.lorem__description #{lorem}
-                    .lorem__item
-                        .lorem-icon
-                            img(src='img/lorem-icon2.png' alt='')
-                        p.lorem__heading Enough
-                            span  coffee breaks
-                        p.lorem__description #{lorem}
-                    .lorem__item
-                        .lorem-icon
-                            img(src='img/lorem-icon3.png' alt='')
-                        p.lorem__heading A little bit of
-                            span  magic
-                        p.lorem__description #{lorem}
-        .numbers
-            .container
-                .number__item
-                    .number__img
-                        img(src='img/number-icon1.png' alt='')
-                    .number__description
-                        span 1085
-                        p Empty cups
-                .number__item
-                    .number__img
-                        img(src='img/number-icon2.png' alt='')
-                    .number__description
-                        span 102
-                        p Happy clients
-                .number__item
-                    .number__img
-                        img(src='img/number-icon3.png' alt='')
-                    .number__description
-                        span 25
-                        p BBQ meetings
-                .number__item
-                    .number__img
-                        img(src='img/number-icon4.png' alt='')
-                    .number__description
-                        span 29
-                        p Cocktail parties
-        .clients
-            .container
-                .clients__heading
-                    h2.heading Some of our clients
-                .clients__description
-                    span.clients__heart We
-                    span every single one
-                .our__clients
-                    .client__item
-                        img(src='img/clients-icon1.png' alt='Mashable')
-                    .client__item
-                        img(src='img/clients-icon2.png' alt='Jquery')
-                    .client__item
-                        img(src='img/clients-icon3.png' alt='LunarTemplate')
-                    .client__item
-                        img(src='img/clients-icon4.png' alt='vhclesign')
-    section.services
-        .container
-            .services__heading
-                h2.heading Our Services
-            .services__second-heading
-                span With Passion &amp; Experience
-            .services-content
-                .services__item
-                    .services__img
-                        img(src='img/services-icon1.png' alt='')
-                    .services__text
-                        - var lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante."
-                        - var services_item_heading="Dictum tincidunt"
-                        p.services__item-heading #{services_item_heading}
-                            span  diam
-                        p.services__description #{lorem_ipsum}
-                .services__item
-                    .services__img
-                        img(src='img/services-icon2.png' alt='')
-                    .services__text
-                        p.services__item-heading #{services_item_heading}
-                            span  diam
-                        p.services__description #{lorem_ipsum}
-                .services__item
-                    .services__img
-                        img(src='img/services-icon3.png' alt='')
-                    .services__text
-                        p.services__item-heading #{services_item_heading}
-                            span  diam
-                        p.services__description #{lorem_ipsum}
-                .services__item
-                    .services__img
-                        img(src='img/services-icon4.png' alt='')
-                    .services__text
-                        p.services__item-heading #{services_item_heading}
-                            span  diam
-                        p.services__description #{lorem_ipsum}
-                .services__item
-                    .services__img
-                        img(src='img/services-icon5.png' alt='')
-                    .services__text
-                        p.services__item-heading #{services_item_heading}
-                            span  diam
-                        p.services__description #{lorem_ipsum}
-                .services__item
-                    .services__img
-                        img(src='img/services-icon6.png' alt='')
-                    .services__text
-                        p.services__item-heading #{services_item_heading}
-                            span  diam
-                        p.services__description #{lorem_ipsum}
-    section.quote
-        .container
-            blockquote
-                | Lorem ipsum dolor sit amet,
-                b  consectetur adipiscing
-                |  elit. Integer at purus vulputate,
-                b  vehicula
-                |  nisi vitae, lobortis ante. Praesent sodales iaculis ultricies. Vestibulum et
-                b  tristique
-                |  nisl, sed volutpat ante.
-            .quote__author
-                span Jonathan Doe
-    section.team
-        .team__top-content
-            .container
-                .team__heading
-                    h2.heading Meet...the team
-                .team__second-heading
-                    span They are really nice!
-        .team-content
-            .container
-                .nav-prev
-                    i.fas.fa-angle-left
-                .nav-next
-                    i.fas.fa-angle-right
-                .nav-indicators
-                    ul
-                        li
-                        li.nav-active
-                        li
-                        li
-                        li
-                .team__item
-                    .team__item-overlay
-                        .team__item-description
-                            span.team__name Jonathan Doe
-                            span.team__position  Creative Director
-                        .social-links
-                            ul
-                                li
-                                    a(href='')
-                                        i.fab.fa-twitter
-                                li
-                                    a(href='')
-                                        i.fab.fa-facebook-f
-                .team__item
-                    .team__item-overlay
-                        .team__item-description
-                            span.team__name Jaden Doe
-                            span.team__position  Mastermind
-                        .social-links
-                            ul
-                                li
-                                    a(href='')
-                                        i.fab.fa-twitter
-                                li
-                                    a(href='')
-                                        i.fab.fa-facebook-f
-                .team__item
-                    .team__item-overlay
-                        .team__item-description
-                            span.team__name Mister Doe
-                            span.team__position  Designer
-                        .social-links
-                            ul
-                                li
-                                    a(href='')
-                                        i.fab.fa-twitter
-                                li
-                                    a(href='')
-                                        i.fab.fa-facebook-f
-    section.portfolio
-        .container
-            .portfolio__top-content
-                .portfolio__heading
-                    h2.heading Portfolio
-                .portfolio__second-heading
-                    span This is what we&rsquo;ve been working on
-            .portfolio__tabs
-                .button-group
-                    button Web
-                    button Digital Art
-                    button Illustrations
-                    button Branding
-                    button All
-        .portfolio-content__part1
-            .portfolio__item
-            .portfolio__item
-            .portfolio__item
-            .portfolio__item
-        .portfolio-content__part2
-            .portfolio__item
-            .portfolio__item.portfolio-clip
-                .portfolio__item-description
-                    img(src='img/portfolio-icon1.png' alt='')
-                    span Free Website PSD
-                    p Web
-            .portfolio__item
-            .portfolio__item
-    section.contact
-        .container
-            .contact__top-content
-                .contact__heading
-                    h2.heading Contact
-                .contact__second-heading
-                    span We would really love to hear from you!
-        .contact__content
-            .container__text
-                .contact__text-name
-                    span Roran
-        .contact__bottom-content
-            .container.container-form
-                .contact__form
-                    .contact__form-left-part
-                        form#form(action='POST')
-                            .form-group
-                                .contact-label
-                                    label(for='first-name') Your Name
-                                    span.contact-required required
-                                input#first-name(type='text' name="first-name")
-                            .form-group
-                                .contact-label
-                                    label(for='email') Your email
-                                    span.contact-required required
-                                input#email(type='email' name="email")
-                            .form-group
-                                .contact-label
-                                    label(for='subject') Subject
-                                input#subject(type='text' name="subject")
-                            .form-group
-                                .contact-label
-                                    label(for='message') Message
-                                    span.contact-required required
-                                textarea#message(rows='6' name="message")
-                            button.btn(type='submit') Send
-                    .contact__form-right-part
-                        .contact__info
-                            span.contact__info-heading Contactinfo
-                            .contact__info-text
-                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate.
-                                p Vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies.
-                            .contact__info-info
-                                .contact__info-address.contact__info-contacts
-                                    .contact__icon
-                                        img(src='img/contact-icon1.png' alt='')
-                                    .contact__info-text2
-                                        p Rue de Halle 245
-                                        p 1000 Brussels
-                                .contact__info-telephone.contact__info-contacts
-                                    .contact__icon
-                                        img(src='img/contact-icon2.png' alt='')
-                                    .contact__info-text2
-                                        p 03 123 45 67
-                                        p 0412 345 678
-                                .contact__info-email.contact__info-contacts
-                                    .contact__icon
-                                        img(src='img/contact-icon3.png' alt='')
-                                    .contact__info-text2
-                                        p info@roran.com
-                                        p question@roran.com
-    footer
-        .container
-            .footer__copyright
-                p &copy; 2014 Roran. All rights reserved
-            .footer-arrow
-                a(href='header')
-                    i.fas.fa-angle-up
-            .footer__social-links.social-links
-                ul
-                    li
-                        a(href='')
-                            i.fab.fa-linkedin-in
-                    li
-                        a(href='')
-                            i.fab.fa-pinterest-p
-                    li
-                        a(href='')
-                            i.fab.fa-twitter
-                    li
-                        a(href='')
-                            i.fab.fa-facebook-f
-script(src='js/main.js')
+        script(src='js/main.js')

@@ -3,29 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e44d72da-d0a9-4491-910a-3976b3bb41a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/css/main.css" afterPath="$PROJECT_DIR$/app/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/app/img/lorem-icon1.png" afterPath="$PROJECT_DIR$/app/img/lorem-icon1.png" />
-      <change beforePath="$PROJECT_DIR$/app/img/lorem-icon2.png" afterPath="$PROJECT_DIR$/app/img/lorem-icon2.png" />
-      <change beforePath="$PROJECT_DIR$/app/img/lorem-icon3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/img/number-icon1.png" afterPath="$PROJECT_DIR$/app/img/number-icon1.png" />
-      <change beforePath="$PROJECT_DIR$/app/img/number-icon2.png" afterPath="$PROJECT_DIR$/app/img/number-icon2.png" />
-      <change beforePath="$PROJECT_DIR$/app/img/number-icon3.png" afterPath="$PROJECT_DIR$/app/img/number-icon3.png" />
-      <change beforePath="$PROJECT_DIR$/app/img/number-icon4.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change beforePath="$PROJECT_DIR$/app/index.jade" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/sass/main.sass" afterPath="$PROJECT_DIR$/app/sass/main.sass" />
-      <change beforePath="$PROJECT_DIR$/dist/css/main.css" afterPath="$PROJECT_DIR$/dist/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/dist/img/lorem-icon1.png" afterPath="$PROJECT_DIR$/dist/img/lorem-icon1.png" />
-      <change beforePath="$PROJECT_DIR$/dist/img/lorem-icon2.png" afterPath="$PROJECT_DIR$/dist/img/lorem-icon2.png" />
-      <change beforePath="$PROJECT_DIR$/dist/img/lorem-icon3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/img/number-icon1.png" afterPath="$PROJECT_DIR$/dist/img/number-icon1.png" />
-      <change beforePath="$PROJECT_DIR$/dist/img/number-icon2.png" afterPath="$PROJECT_DIR$/dist/img/number-icon2.png" />
-      <change beforePath="$PROJECT_DIR$/dist/img/number-icon3.png" afterPath="$PROJECT_DIR$/dist/img/number-icon3.png" />
-      <change beforePath="$PROJECT_DIR$/dist/img/number-icon4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/app/index.pug" afterPath="$PROJECT_DIR$/app/index.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,21 +15,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="0" column="2541" lean-forward="false" selection-start-line="0" selection-start-column="2541" selection-end-line="0" selection-end-column="2541" />
+            <state relative-caret-position="170">
+              <caret line="0" column="889" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13715" />
               <folding>
-                <element signature="e#5424#5429#0" expanded="true" />
-                <element signature="e#9873#9880#0" expanded="true" />
-                <element signature="e#13112#13118#0" expanded="true" />
+                <element signature="e#5501#5506#0" expanded="true" />
+                <element signature="e#9992#9999#0" expanded="true" />
+                <element signature="e#13231#13237#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
@@ -63,8 +42,8 @@
       <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="166" column="51" lean-forward="false" selection-start-line="166" selection-start-column="51" selection-end-line="166" selection-end-column="51" />
+            <state relative-caret-position="129">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -97,7 +76,6 @@
       <find>about__heading</find>
       <find>browser</find>
       <find>border</find>
-      <find>img</find>
       <find>cssnano</find>
       <find>cache</find>
       <find>prett</find>
@@ -114,6 +92,7 @@
       <find>css</find>
       <find>var</find>
       <find>btn</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,9 +108,9 @@
         <option value="$PROJECT_DIR$/app/index.jade" />
         <option value="$PROJECT_DIR$/app/css/main.css" />
         <option value="$PROJECT_DIR$/app/sass/main.sass" />
-        <option value="$PROJECT_DIR$/app/index.pug" />
         <option value="$PROJECT_DIR$/app/includes/social.pug" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/app/index.pug" />
       </list>
     </option>
   </component>
@@ -280,12 +259,12 @@
       <workItem from="1519411268951" duration="591000" />
       <workItem from="1519461522083" duration="607000" />
       <workItem from="1519463001672" duration="3056000" />
-      <workItem from="1519643429623" duration="6937000" />
+      <workItem from="1519643429623" duration="7242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194628000" />
+    <option name="totallyTimeSpent" value="194933000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,13 +277,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="376" y="0" width="1166" height="1010" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20457143" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20457143" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34177214" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -398,31 +378,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="0" column="2541" lean-forward="false" selection-start-line="0" selection-start-column="2541" selection-end-line="0" selection-end-column="2541" />
-          <folding>
-            <element signature="e#5424#5429#0" expanded="true" />
-            <element signature="e#9873#9880#0" expanded="true" />
-            <element signature="e#13112#13118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="166" column="51" lean-forward="false" selection-start-line="166" selection-start-column="51" selection-end-line="166" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="0" column="889" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13715" />
+          <folding>
+            <element signature="e#5501#5506#0" expanded="true" />
+            <element signature="e#9992#9999#0" expanded="true" />
+            <element signature="e#13231#13237#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

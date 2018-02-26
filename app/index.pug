@@ -82,7 +82,7 @@ html(lang='en')
                         each lorem, i in lorems
                             .lorem__item
                                 .lorem-icon
-                                    img(src="img/lorem-icon" + i + ".png")
+                                    img(src="img/lorem-icon" + i + ".png" alt='')
                                 p.lorem__heading=lorem.lorem__heading
                                     span=lorem.lorem_span
                                 p.lorem__description #{lorem_desc}
@@ -93,7 +93,7 @@ html(lang='en')
                         each social, i in socials
                             .number__item
                                 .number__img
-                                    img(src="img/number-icon" + i + ".png")
+                                    img(src="img/number-icon" + i + ".png" alt='')
                                 .number__description
                                     span=social.span
                                     p=social.p
@@ -107,7 +107,7 @@ html(lang='en')
                     .our__clients
                         -for(let i = 1; i < 5; i++ )
                             .client__item
-                                img(src="img/clients-icon" + i + ".png")
+                                img(src="img/clients-icon" + i + ".png" alt='')
         section.services
             - let lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante."
             - let services_item_heading="Dictum tincidunt"
@@ -121,7 +121,7 @@ html(lang='en')
                     -for(let i = 1; i < 7; i++ )
                         .services__item
                             .services__img
-                                img(src="img/services-icon"+i+".png")
+                                img(src="img/services-icon"+i+".png" alt='')
                             .services__text
                                 p.services__item-heading #{services_item_heading}
                                     span  #{services_item_2}

@@ -196,10 +196,9 @@ nav
   font-size: 45px
   font-weight: 900
   color: #303030
-.about__heading h2
-      &:after
-        content: "."
-        color: #39a38f
+  &:after
+    content: "."
+    color: #39a38f
 .about__heading-2
   font-size: 30px
   color: #c0c0c0
@@ -484,40 +483,35 @@ blockquote
 .portfolio__top-content
   padding-bottom: 75px
 .portfolio__item
-  height: 300px
-  width: 25%
   color: #fff
-  background: #39a38f
-.portfolio-content__part1, .portfolio-content__part2
-  padding-top: 48px
-  width: 100%
-  flex-wrap: wrap
-.portfolio-content__part1 + .portfolio-content__part2
-  padding: 0
-.portfolio-content__part1 .portfolio__item
-  &:nth-child(2n)
-    background: #62c5b2
-.portfolio-content__part2 .portfolio__item
-  &:nth-child(2n+1)
-    background: #62c5b2
+  position: relative
+
 .portfolio__tabs .button-group
   flex-wrap: wrap
   padding: 0 15px
-.portfolio-clip img
+.portfolio-clip .portfolio__item--caption
   height: 47px
   width: 45px
   padding-bottom: 20px
 .portfolio-clip
   align-items: center
   flex-wrap: wrap
-.portfolio__item-description
+.portfolio__item--description
+  position: absolute
   width: 180px
   align-items: center
   flex-wrap: wrap
-.portfolio__item-description span
+  position: absolute
+  top: 50%
+  color: #fff
+  transform: translateY(-50%)
+.portfolio__item--description span
   font-size: 18px
   font-weight: 900
-
+.portfolio__galery
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
 
 //contact
 .contact, .contact .container, .contact__content, .container__text
@@ -652,6 +646,18 @@ blockquote
   width: 100%
   position: relative
 
+.slider
+  width: 100%
+
+.slick-slide
+  margin: 0px 20px
+  img
+    width: 100%
+
+.slick-prev:before, .slick-next:before
+  color: black
+
+
 //footer
 footer
   background: #d8d8d8
@@ -681,7 +687,7 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
   display: flex
   justify-content: space-between
 
-.about__heading-2, .services__heading, .services__second-heading, .quote__author, .team__heading, .team__second-heading, .portfolio__heading, .portfolio__second-heading, .contact__heading, .contact__second-heading, .contact__form-right-part, .contact__text-name, .portfolio__item-description, .portfolio-clip, .number__item, .services-content, .team__top-content, .team__item-overlay, .button-group, .portfolio__tabs, .portfolio-content__part1, .portfolio-content__part2
+.about__heading-2, .services__heading, .services__second-heading, .quote__author, .team__heading, .team__second-heading, .portfolio__heading, .portfolio__second-heading, .contact__heading, .contact__second-heading, .contact__form-right-part, .contact__text-name, .portfolio__item--description, .portfolio-clip, .number__item, .services-content, .team__top-content, .team__item-overlay, .button-group, .portfolio__tabs, .portfolio-content__part1, .portfolio-content__part2
   display: flex
   justify-content: space-around
 .about__heading-2, .services__heading, .services__second-heading, .quote__author, .team__heading, .team__second-heading, .portfolio__heading, .portfolio__second-heading, .contact__heading, .contact__second-heading
@@ -712,6 +718,11 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
     right: -40px
   .nav-prev
     left: -40px
+  .portfolio__galery, .grid
+    width: 1200px
+@media screen and (max-width: 1199px)
+  .portfolio__galery, .grid
+    width: 900px
 @media screen and (max-width: 1200px)
   .container
     width: 940px
@@ -723,6 +734,8 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
 @media screen and (max-width: 992px)
   .container, .contact .container
     width: 760px
+  .portfolio__galery, .grid
+    width: 600px
   .header__content
     margin: 0 10px
   .team__item-overlay
@@ -772,8 +785,10 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
   .contact__text-name:after
     bottom: -12px
 @media screen and (max-width: 768px)
-  .container, .contact .container
+  .container, .contact .container, .portfolio__galery, .grid
     width: 470px
+  .portfolio__galery, .grid
+    width: 300px
   .team__item-description
     padding: 0
     display: flex
@@ -788,12 +803,9 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
     display: none
   #menu__hamburger
     display: flex
-  .portfolio__item
-    height: 160px
-    width: 50%
-  .portfolio__item-description span
+  .portfolio__item--description span
     font-size: 16px
-  .portfolio-clip img
+  .portfolio-clip .portfolio__item--caption
     height: 37px
     width: 35px
   .team__item-overlay
@@ -832,6 +844,8 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
 @media screen and (max-width: 480px)
   .container, .contact .container
     width: 320px
+  .portfolio__galery, .grid
+    width: 300px
   .header__title
     font-size: 78px
   .header__second-title
@@ -844,6 +858,12 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
     position: relative
     top: -15px
     right: 190px
+
+  .button-group button
+    margin-bottom: 10px
+  .button-group
+    flex-wrap: wrap
+    width: 290px
   .header__content
     padding: 0 10px
   .services__item
@@ -867,8 +887,6 @@ footer .container, header, .header__content, nav, .contact-label, .nav-indicator
     font-size: 36px
   blockquote, .about__heading-2, .services__second-heading, .team__second-heading, .portfolio__second-heading, .contact__second-heading
     font-size: 18px
-  .portfolio__item
-    width: 100%
   .contact__form
     width: 260px
     padding: 20px

@@ -1,4 +1,13 @@
 doctype html
+mixin social
+    li
+        a(href='')
+            i.fab.fa-twitter
+    li
+        a(href='')
+            i.fab.fa-facebook-f
+- let names = [{team__name: 'Jonathan Doe ', team__position: 'Creative Director'},{team__name: 'Jaden Doe ', team__position: 'Mastermind'},{team__name: 'Mister Doe ', team__position: 'Designer'}]
+
 html(lang='en')
     head
         meta(charset='UTF-8')
@@ -15,6 +24,9 @@ html(lang='en')
         link(rel='icon' type='image/png' sizes='16x16' href='img/favicon-16x16.png')
         link(rel='apple-touch-icon' sizes='180x180' href='img/apple-icon-180x180.png')
         link(rel='stylesheet' href='css/main.css')
+        link(rel='stylesheet', type='text/css', href='./libs/isotope-docs/css/isotope-docs.css')
+        link(rel='stylesheet', type='text/css', href='./libs/slick/slick.css')
+        link(rel='stylesheet', type='text/css', href='./libs/slick/slick-theme.css')
         link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i' rel='stylesheet')
         link(href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet')
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
@@ -139,6 +151,7 @@ html(lang='en')
                 .quote__author
                     span Jonathan Doe
         section.team
+            - let teams = [{team__name: 'Jonathan Doe', team__position: 'Creative Director'},{team__name: 'Jaden Doe', team__position: 'Mastermind'}, {team__name: 'Mister Doe', team__position: 'Designer'}, {team__name: 'Jaden Doe', team__position: 'Mastermind'},{team__name: 'Mister Doe', team__position: 'Designer'}]
             .team__top-content
                 .container
                     .team__heading
@@ -147,57 +160,54 @@ html(lang='en')
                         span They are really nice!
             .team-content
                 .container
-                    .nav-prev
-                        i.fas.fa-angle-left
-                    .nav-next
-                        i.fas.fa-angle-right
-                    .nav-indicators
-                        ul
-                            li
-                            li.nav-active
-                            li
-                            li
-                            li
-                    mixin social
-                        li
-                            a(href='')
-                                i.fab.fa-twitter
-                        li
-                            a(href='')
-                                i.fab.fa-facebook-f
-                    - let names = [{team__name: 'Jonathan Doe ', team__position: 'Creative Director'},{team__name: 'Jaden Doe ', team__position: 'Mastermind'},{team__name: 'Mister Doe ', team__position: 'Designer'}]
-                        each name, i in names
-                            .team__item
-                                .team__item-overlay
-                                    .team__item-description
-                                        span.team__name=name.team__name
-                                        span.team__position=name.team__position
-                                    .social-links
-                                        ul
-                                            +social
+                     section.center.slider
+                         each team, i in teams
+                             .team__item
+                                 .team__item-overlay
+                                     .team__item-description
+                                         span.team__name #{team.team__name}
+                                         br
+                                         span.team__position #{team.team__position}
+                                     .social-links
+                                         ul
+                                             +social
+
         section.portfolio
             .container
                 .portfolio__top-content
                     .portfolio__heading
                         h2.heading Portfolio
                     .portfolio__second-heading
-                        span This is what we&rsquo;ve been working on
-                .portfolio__tabs
-                    .button-group
-                        each val in ['Web', 'Digital Art', 'Illustrations', 'Branding', 'All']
-                            button= val
-            .portfolio-content__part1
-                -for(let i = 0; i < 4; i++ )
-                    .portfolio__item
-            .portfolio-content__part2
-                .portfolio__item
-                .portfolio__item.portfolio-clip
-                    .portfolio__item-description
-                        img(src='img/portfolio-icon1.png' alt='')
-                        span Free Website PSD
-                        p Web
-                .portfolio__item
-                .portfolio__item
+                        span This is what we’ve been working on
+            .portfolio__galery(data-js='hero-demo')
+                .filters.button-group.js-radio-button-group
+                    button.button(data-filter='.web') Web
+                    button.button(data-filter='.digitalArt') Digital Art
+                    button.button(data-filter='.illustrations') Illustrations
+                    button.button(data-filter='.branding') Branding
+                    button.button.is-checked(data-filter='*') All
+                .grid
+                    .element-item.digitalArt(data-category='digitalArt')
+                        img(src='img/portfolio-0.png', alt='')
+                    .element-item.digitalArt(data-category='digitalArt')
+                        img(src='img/portfolio-1.png', alt='')
+                    .element-item.web(data-category='web')
+                        img(src='img/portfolio-0.png', alt='')
+                    .element-item.illustrations(data-category='illustrations')
+                        img(src='img/portfolio-1.png', alt='')
+                    .element-item.branding(data-category='branding')
+                        img(src='img/portfolio-1.png', alt='')
+                    .element-item.portfolio-clip.web(data-category='web')
+                        img(src='img/portfolio-0.png', alt='')
+                        .portfolio__item--description
+                            img.portfolio__item--caption(src='img/portfolio-icon1.png')
+                            span Free Website PSD
+                            p Web
+                    .element-item.web(data-category='web')
+                        img(src='img/portfolio-1.png', alt='')
+                    .element-item.transition.branding(data-category='branding')
+                        img(src='img/portfolio-0.png', alt='')
+
         section.contact
             .container
                 .contact__top-content

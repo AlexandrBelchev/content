@@ -1,11 +1,10 @@
 doctype html
 mixin social
-    li
-        a(href='')
-            i.fab.fa-twitter
-    li
-        a(href='')
-            i.fab.fa-facebook-f
+    - let socials = [{icon: 'fa-twitter'},{icon:'fa-facebook-f'}]
+    each social, i in socials
+        li.team__social_item
+            a.nav_link(href='')
+                i.fab(class=social.icon)
 - let names = [{team__name: 'Jonathan Doe ', team__position: 'Creative Director'},{team__name: 'Jaden Doe ', team__position: 'Mastermind'},{team__name: 'Mister Doe ', team__position: 'Designer'}]
 
 html(lang='en')
@@ -33,14 +32,14 @@ html(lang='en')
         title Roran template
     body
         header
-            .container
+            .container.header_container
                 .header__content
-                    .header__content-left-part
+                    .header__content_left_part
                         h1.header__title Roran
-                        span.header__second-title psd template
-                        span.header__third-title By LunarTemplates
-                        span.header__link www.lunartemplates.com
-                    .header__content-right-part
+                        span.header__second_title.header_heading psd template
+                        span.header__third_title.header_heading By LunarTemplates
+                        span.header__link.header_heading www.lunartemplates.com
+                    .header__content_right_part
                         span.header__text
                             | Free to download
                             br
@@ -48,43 +47,36 @@ html(lang='en')
                 .main-arrow
                     a(href='.about')
                         img(src='img/arrow3.png' alt='')
-        section#main__menu.main__menu
+        section.main__menu
             .container
-                nav
+                nav.navigation
                     .logo
                         a.logo__text(href='') Roran
-                    a#menu__hamburger(href='#main__menu')
-                        span
-                        span
-                        span
-                    ul#menu.menu
+                    a.menu__hamburger(href='.main__menu')
+                        span.menu__hamburger__item
+                        span.menu__hamburger__item
+                        span.menu__hamburger__item
+                    ul.menu
                         - let menus = [{link: 'header', text: 'Home'},{link: '.about', text: 'About'},{link: '.team', text: 'Team'},{link: '.services', text: 'Services'},{link: '.portfolio', text: 'Portfolio'},{link: '.contact', text: 'Contact'}]
                         each menu, i in menus
-                            li
-                                a(href=menu.link)=menu.text
-                    .social-links
+                            li.navigation__item
+                                a.menu__item(href=menu.link)=menu.text
+                    .navigation_social_links.social_links
                         ul
-                            li
-                                a(href='')
-                                    i.fab.fa-linkedin-in
-                            li
-                                a(href='')
-                                    i.fab.fa-pinterest-p
-                            li
-                                a(href='')
-                                    i.fab.fa-twitter
-                            li
-                                a(href='')
-                                    i.fab.fa-facebook-f
+                            - let navs = [{icon: 'fa-linkedin-in'},{icon: 'fa-pinterest-p'},{icon: 'fa-facebook-f'},{icon: 'fa-twitter'}]
+                                each nav, i in navs
+                                    li
+                                        a.nav_link(href='')
+                                            i.fab(class=nav.icon)
         section.about
             .about__lorem
                 .container
                     .about__heading
-                        h2 About Roran
-                    .about__heading-2
-                        span Creative Studio
+                        h2.about__title About Roran
+                    .about__heading_2
+                        span.about__title_second Creative Studio
                     .about__description
-                        p
+                        p.about__text
                             | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             br
                             | vulputate, vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies
@@ -93,22 +85,21 @@ html(lang='en')
                         - let lorems = [{lorem__heading: 'Some fancy ', lorem_span: 'colors'},{lorem__heading: 'Enough ', lorem_span: 'coffee breaks'},{lorem__heading: 'A little bit of ', lorem_span: 'magic'}]
                         each lorem, i in lorems
                             .lorem__item
-                                .lorem-icon
+                                .lorem_icon
                                     img(src="img/lorem-icon" + i + ".png" alt='')
                                 p.lorem__heading=lorem.lorem__heading
-                                    span=lorem.lorem_span
+                                    span.lorem_attention=lorem.lorem_span
                                 p.lorem__description #{lorem_desc}
             .numbers
-                .container
+                .container.numbers_container
                     - let socials = [{span: '1085', p: 'Empty cups'},{span: '102', p: 'Happy clients'},{span: '25', p: 'BBQ meetings'},{span: '29', p: 'Cocktail parties'},]
-                    .container
-                        each social, i in socials
-                            .number__item
-                                .number__img
-                                    img(src="img/number-icon" + i + ".png" alt='')
-                                .number__description
-                                    span=social.span
-                                    p=social.p
+                    each social, i in socials
+                        .number__item
+                            .number__img
+                                img(src="img/number-icon" + i + ".png" alt='')
+                            .number__description
+                                span.number__item_number=social.span
+                                p.number__item_text=social.p
             .clients
                 .container
                     .clients__heading
@@ -127,20 +118,20 @@ html(lang='en')
             .container
                 .services__heading
                     h2.heading Our Services
-                .services__second-heading
+                .services__second_heading
                     span With Passion &amp; Experience
-                .services-content
+                .services_content
                     -for(let i = 1; i < 7; i++ )
                         .services__item
                             .services__img
                                 img(src="img/services-icon"+i+".png" alt='')
                             .services__text
-                                p.services__item-heading #{services_item_heading}
-                                    span  #{services_item_2}
+                                p.services__item_heading #{services_item_heading}
+                                    span.services_attention  #{services_item_2}
                                 p.services__description #{lorem_ipsum}
         section.quote
-            .container
-                blockquote
+            .container.quote__container
+                blockquote.blockquote
                     | Lorem ipsum dolor sit amet,
                     b  consectetur adipiscing
                     |  elit. Integer at purus vulputate,
@@ -149,43 +140,41 @@ html(lang='en')
                     b  tristique
                     |  nisl, sed volutpat ante.
                 .quote__author
-                    span Jonathan Doe
+                    span.quote__name Jonathan Doe
         section.team
             - let teams = [{team__name: 'Jonathan Doe', team__position: 'Creative Director'},{team__name: 'Jaden Doe', team__position: 'Mastermind'}, {team__name: 'Mister Doe', team__position: 'Designer'}, {team__name: 'Jaden Doe', team__position: 'Mastermind'},{team__name: 'Mister Doe', team__position: 'Designer'}]
-            .team__top-content
+            .team__top_content
                 .container
                     .team__heading
                         h2.heading Meet...the team
-                    .team__second-heading
+                    .team__second_heading
                         span They are really nice!
-            .team-content
-                .container
+            .team_content
+                .container.team_container
                      section.center.slider
                          each team, i in teams
                              .team__item
-                                 .team__item-overlay
-                                     .team__item-description
+                                 .team__item_overlay
+                                     .team__item_description
                                          span.team__name #{team.team__name}
                                          br
                                          span.team__position #{team.team__position}
-                                     .social-links
-                                         ul
+                                     .social_links.team_links
+                                         ul.team__social_links
                                              +social
 
         section.portfolio
+            - let buttons = [{data_filter: '.web', button_name: 'Web'},{data_filter: '.digitalArt', button_name: 'Digital Art'},{data_filter: '.illustrations', button_name: 'Illustrations'},{data_filter: '.branding', button_name: 'Branding'},{data_filter: '*', button_name: 'All'}]
             .container
-                .portfolio__top-content
+                .portfolio__top_content
                     .portfolio__heading
                         h2.heading Portfolio
-                    .portfolio__second-heading
+                    .portfolio__second_heading
                         span This is what we’ve been working on
-            .portfolio__galery(data-js='hero-demo')
-                .filters.button-group.js-radio-button-group
-                    button.button(data-filter='.web') Web
-                    button.button(data-filter='.digitalArt') Digital Art
-                    button.button(data-filter='.illustrations') Illustrations
-                    button.button(data-filter='.branding') Branding
-                    button.button.is-checked(data-filter='*') All
+            .portfolio__gallery(data-js='hero-demo')
+                .filters.button_group.js-radio-button-group
+                    each button, i in buttons
+                        button.gallery_button(data-filter=button.data_filter) #{button.button_name}
                 .grid
                     .element-item.digitalArt(data-category='digitalArt')
                         img(src='img/portfolio-0.png', alt='')
@@ -199,9 +188,9 @@ html(lang='en')
                         img(src='img/portfolio-1.png', alt='')
                     .element-item.portfolio-clip.web(data-category='web')
                         img(src='img/portfolio-0.png', alt='')
-                        .portfolio__item--description
-                            img.portfolio__item--caption(src='img/portfolio-icon1.png')
-                            span Free Website PSD
+                        .portfolio__item_description
+                            img.portfolio__item_caption(src='img/portfolio-icon1.png')
+                            span.portfolio__item_heading Free Website PSD
                             p Web
                     .element-item.web(data-category='web')
                         img(src='img/portfolio-1.png', alt='')
@@ -209,85 +198,80 @@ html(lang='en')
                         img(src='img/portfolio-0.png', alt='')
 
         section.contact
-            .container
-                .contact__top-content
+            .container.contact__container
+                .contact__top_content
                     .contact__heading
                         h2.heading Contact
-                    .contact__second-heading
+                    .contact__second_heading
                         span We would really love to hear from you!
             .contact__content
                 .container__text
-                    .contact__text-name
-                        span Roran
-            .contact__bottom-content
-                .container.container-form
+                    .contact__text_name
+                        span.contact__text_heading Roran
+            .contact__bottom_content
+                .container.container__form
                     .contact__form
                         .contact__form-left-part
-                            form#form(action='POST')
-                                .form-group
-                                    .contact-label
-                                        label(for='first-name') Your Name
-                                        span.contact-required required
-                                    input#first-name(type='text' name="first-name")
-                                .form-group
-                                    .contact-label
-                                        label(for='email') Your email
-                                        span.contact-required required
-                                    input#email(type='email' name="email")
-                                .form-group
-                                    .contact-label
-                                        label(for='subject') Subject
-                                    input#subject(type='text' name="subject")
-                                .form-group
-                                    .contact-label
-                                        label(for='message') Message
-                                        span.contact-required required
-                                    textarea#message(rows='6' name="message")
+                            form.form(action='POST')
+                                .form__group
+                                    .form__label
+                                        label.form__label_heading Your Name
+                                        span.contact__label_required required
+                                    input.form__input(type='text' name="first-name")
+                                .form__group
+                                    .form__label
+                                        label.form__label_heading Your email
+                                        span.contact__label_required required
+                                    input.form__input(type='email' name="email")
+                                .form__group
+                                    .form__label
+                                        label.form__label_heading Subject
+                                    input.form__input(type='text' name="subject")
+                                .form__group
+                                    .form__label
+                                        label.form__label_heading Message
+                                        span.contact__label_required required
+                                    textarea.form__textarea(rows='6' name="message")
                                 button.btn(type='submit') Send
-                        .contact__form-right-part
+                        .contact__form_right_part
                             .contact__info
-                                span.contact__info-heading Contactinfo
-                                .contact__info-text
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate.
-                                    p Vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies.
-                                .contact__info-info
-                                    .contact__info-address.contact__info-contacts
+                                span.contact__info_heading Contactinfo
+                                .contact__info_text
+                                    p.contact_description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate.
+                                    p.contact_description Vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies.
+                                .contact__info_info
+                                    .contact__info_contacts
                                         .contact__icon
                                             img(src='img/contact-icon1.png' alt='')
-                                        .contact__info-text2
-                                            p Rue de Halle 245
-                                            p 1000 Brussels
-                                    .contact__info-telephone.contact__info-contacts
+                                        .contact__info_text2
+                                            p.contact_us Rue de Halle 245
+                                            p.contact_us 1000 Brussels
+                                    .contact__info_contacts
                                         .contact__icon
                                             img(src='img/contact-icon2.png' alt='')
-                                        .contact__info-text2
-                                            p 03 123 45 67
-                                            p 0412 345 678
-                                    .contact__info-email.contact__info-contacts
+                                        .contact__info_text2
+                                            p.contact_us 03 123 45 67
+                                            p.contact_us 0412 345 678
+                                    .contact__info_contacts
                                         .contact__icon
                                             img(src='img/contact-icon3.png' alt='')
-                                        .contact__info-text2
-                                            p info@roran.com
-                                            p question@roran.com
-        footer
-            .container
+                                        .contact__info_text2
+                                            p.contact_us info@roran.com
+                                            p.contact_us question@roran.com
+        footer.footer
+            .container.footer__container
                 .footer__copyright
                     p &copy; 2014 Roran. All rights reserved
                 .footer-arrow
                     a(href='header')
-                        i.fas.fa-angle-up
-                .footer__social-links.social-links
+                        i.fas.fa-angle-up.footer_arrow_icon
+                .footer__social_wrap.social_links
+                    - let footer_link = [{icon: 'fa-linkedin-in'},{icon: 'fa-pinterest-p'},{icon: 'fa-facebook-f'},{icon: 'fa-twitter'}]
                     ul
-                        li
-                            a(href='')
-                                i.fab.fa-linkedin-in
-                        li
-                            a(href='')
-                                i.fab.fa-pinterest-p
-                        li
-                            a(href='')
-                                i.fab.fa-twitter
-                        li
-                            a(href='')
-                                i.fab.fa-facebook-f
+                        each link, i in footer_link
+                            li.footer__social_item
+                                a.footer_link(href='')
+                                    i.fab.footer_icon(class=link.icon)
         script(src='js/main.js')
+        script(src='libs/slick/slick.js')
+        script(src='libs/isotope-docs/js/isotope-docs.min.js')

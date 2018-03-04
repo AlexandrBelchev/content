@@ -420,6 +420,16 @@ header {
   padding: 79px 0 75px 0; }
 
 .our__clients {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -684,8 +694,30 @@ header {
   color: #959595;
   font-size: 16px; }
 
+.filters_wrap {
+  width: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
 .button_group {
-  width: 500px; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0 15px; }
 
 .portfolio__top_content {
   padding-bottom: 75px; }
@@ -693,12 +725,6 @@ header {
 .portfolio__item {
   color: #fff;
   position: relative; }
-
-.button_group {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  padding: 0 15px; }
 
 .portfolio__item_caption {
   height: 47px;
@@ -735,6 +761,7 @@ header {
   font-weight: 900; }
 
 .portfolio__gallery {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1010,7 +1037,7 @@ header {
   display: -ms-flexbox;
   display: flex; }
 
-.footer__container, header, .header__content, .navigation, .form__label, .numbers_container, .clients .our__clients, .lorem, .team_content .container, .menu, .social_links ul {
+.footer__container, header, .header__content, .navigation, .form__label, .numbers_container, .lorem, .team_container, .menu, .social_links ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1020,7 +1047,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.about__heading_2, .services__heading, .quote__author, .team__heading, .team__second_heading, .portfolio__heading, .portfolio__second_heading, .contact__heading, .contact__second_heading, .contact__form_right_part, .portfolio__item_description, .portfolio-clip, .number__item, .services_content, .team__top_content, .team__item_overlay, .button_group, .portfolio__tabs, .portfolio-content__part1, .portfolio-content__part2 {
+.about__heading_2, .services__heading, .quote__author, .team__heading, .team__second_heading, .portfolio__heading, .portfolio__second_heading, .contact__heading, .contact__second_heading, .contact__form_right_part, .portfolio__item_description, .portfolio-clip, .number__item, .services_content, .team__top_content, .team__item_overlay, .portfolio__tabs, .portfolio-content__part1, .portfolio-content__part2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1077,7 +1104,9 @@ header {
   .nav-next {
     right: -40px; }
   .nav-prev {
-    left: -40px; } }
+    left: -40px; }
+  .header__content {
+    position: relative; } }
 
 @media screen and (max-width: 1199px) {
   .portfolio__galery, .grid {
@@ -1092,7 +1121,7 @@ header {
     width: 940px; } }
 
 @media screen and (max-width: 992px) {
-  .container, .contact .container {
+  .container, .container__form {
     width: 760px; }
   .portfolio__galery, .grid {
     width: 600px; }
@@ -1147,7 +1176,7 @@ header {
             justify-content: center; }
   .lorem__item {
     padding: 0 10px; }
-  .numbers_container, .our__clients {
+  .numbers_container {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -1170,7 +1199,7 @@ header {
     bottom: -12px; } }
 
 @media screen and (max-width: 768px) {
-  .container, .contact .container, .portfolio__galery, .grid {
+  .container, .container__form, .portfolio__galery, .grid {
     width: 470px; }
   .portfolio__galery, .grid {
     width: 300px; }

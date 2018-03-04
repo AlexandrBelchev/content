@@ -173,8 +173,9 @@ html(lang='en')
                         span This is what we’ve been working on
             .portfolio__gallery(data-js='hero-demo')
                 .filters.button_group.js-radio-button-group
-                    each button, i in buttons
-                        button.gallery_button(data-filter=button.data_filter) #{button.button_name}
+                    .filters_wrap
+                        each button, i in buttons
+                            button.gallery_button(data-filter=button.data_filter) #{button.button_name}
                 .grid
                     .element-item.digitalArt(data-category='digitalArt')
                         img(src='img/portfolio-0.png', alt='')

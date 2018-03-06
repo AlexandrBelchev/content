@@ -1,0 +1,32 @@
+.footer
+  background: #d8d8d8
+  display: flex
+  justify-content: center
+  padding: 15.8px 0 15.8px 0
+  &__container
+    align-items: center
+  &__copyright
+    color: #737373
+    font-size: 15px
+  &__social_item
+    padding: 0 8.5px
+  &__social_wrap
+    justify-content: flex-end
+  &-arrow
+    justify-content: center
+.footer__copyright, .footer-arrow, .footer__social_wrap
+  width: 33.33%
+  display: flex
+.fa-angle-up
+  font-size: 38px
+.footer_arrow_icon, .footer_icon
+  color: #878787
+  &:hover
+    color: #000
+@media screen and (max-width: 480px)
+  .footer__container
+    padding: 0 10px
+    flex-wrap: wrap
+  .footer__copyright, .footer-arrow, .footer__social_wrap
+    width: 100%
+    justify-content: center

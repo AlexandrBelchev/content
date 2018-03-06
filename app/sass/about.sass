@@ -1,0 +1,142 @@
+.about
+  &__lorem
+    text-align: center
+    padding-top: 55px
+    padding-bottom: 75px
+  &__title
+    font-size: 45px
+    font-weight: 900
+    color: #303030
+    &:after
+      content: "."
+      color: #39a38f
+  &__heading_2
+    font-size: 30px
+    color: #c0c0c0
+
+  &__title_second
+    &:after
+      content: ""
+      display: flex
+      height: 1px
+      position: relative
+      width: 108px
+      background: #c0c0c0
+      top: 13px
+      left: 50%
+      transform: translateX(-50%)
+  &__description
+    display: flex
+    justify-content: space-around
+    padding-top: 53px
+  &__text
+    font-size: 17px
+    font-weight: 400
+    color: #979797
+
+.lorem
+  padding-top: 61px
+  &__item
+    width: 208px
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+  &__heading
+    font-size: 18px
+    color: #303030
+    padding-top: 25px
+    padding-bottom: 27px
+  &_attention
+    color: #39a38f
+  &__description
+    color: #707070
+    font-size: 13px
+    font-weight: 400
+  &_icon
+    width: 80px
+    height: 70px
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+.about__numbers
+  padding-top: 57px
+  padding-bottom: 60px
+  background: #f0f0f0
+  text-align: center
+.number
+  &__item
+    width: 220px
+    align-items: center
+  &__img
+    display: flex
+  &__item_text
+    font-size: 18px
+    color: #707070
+  &__item_number
+    font-size: 50px
+    line-height: 50px
+    color: #39a38f
+    font-weight: 900
+
+  &__description
+    text-align: left
+    flex-wrap: wrap
+
+.clients
+  color: #fff
+  background: #39a38f
+  text-align: center
+  padding: 79px 0 75px 0
+  &__description
+    font-size: 23px
+    position: relative
+    &:after
+      content: ""
+      display: flex
+      height: 1px
+      position: absolute
+      width: 130px
+      background: #fff
+      top: 49px
+      left: 50%
+      transform: translateX(-50%)
+  &__heart
+    &:after
+      content: ''
+      width: 17px
+      height: 17px
+      margin: 0 5px
+      display: inline-block
+      background: url("../img/clients__heart.png")
+.our__clients
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  align-items: center
+  padding-top: 67px
+.client__item img
+  width: 100%
+@media screen and (max-width: 992px)
+  .lorem
+    flex-wrap: wrap
+    justify-content: center
+  .lorem__item
+    padding: 0 10px
+  .client__item
+    margin: 10px
+  .about__numbers
+    padding-top: 37px
+    padding-bottom: 40px
+  .number__item
+    padding: 20px 0
+  .numbers_container
+    flex-wrap: wrap
+    justify-content: center
+@media screen and (max-width: 480px)
+  .about__heading
+    font-size: 36px
+  .clients
+    padding: 30px 0
+  .about__heading_2
+    font-size: 18px

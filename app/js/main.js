@@ -44,14 +44,14 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 991,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 481,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1

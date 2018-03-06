@@ -1,0 +1,132 @@
+.team
+  padding-top: 57px
+  color: #979797
+  &__top_content
+    padding-bottom: 79px
+  &_content
+    background-color: #f0f0f0
+    padding: 55px 0 74px 0
+    position: relative
+    display: flex
+    justify-content: center
+    &:before
+      content: ""
+      position: absolute
+      top: -28px
+      left: 50%
+      margin-left: -28px
+      width: 0
+      height: 0
+      border-bottom: 28px solid #f0f0f0
+      border-left: 28px solid transparent
+      border-right: 28px solid transparent
+  &_container
+    position: relative
+  &__item
+    width: 300px
+    height: 300px
+    background-color: #39a38f
+    position: relative
+    display: flex
+  &__item_overlay
+    background-color: #fff
+    height: 73px
+    width: 100%
+    position: absolute
+    bottom: 3px
+    left: 50%
+    transform: translateX(-50%)
+  &__item_description
+    flex-wrap: wrap
+    padding-top: 15px
+    padding-left: 15px
+    width: 150px
+  &__name
+    font-size: 18px
+    color: #000
+  &__social_links
+    padding-top: 15px
+    justify-content: flex-end
+  &__social_item
+    padding: 0 7px
+.social_links.team_links
+  padding-right: 7px
+  display: flex
+  justify-content: flex-end
+
+.nav-prev
+  left: -52px
+.nav-next, .nav-prev
+  z-index: 5
+  position: absolute
+  font-size: 42px
+  top: 50%
+  color: #d2d2d2
+  transform: translateY(-50%)
+.nav-next
+  right: -52px
+.slider
+  width: 100%
+.slick-slide
+  margin: 0px 20px
+  img
+    width: 100%
+.slick-prev:before, .slick-next:before
+  color: black
+@media screen and (min-width: 1200px)
+  .nav-next
+    right: -40px
+  .nav-prev
+    left: -40px
+@media screen and (max-width: 1199px)
+  .nav-prev
+    left: -20px
+  .nav-next
+    right: -20px
+@media screen and (max-width: 991px)
+  .slick-slide
+    margin: 0px 50px
+@media screen and (max-width: 992px)
+  .nav-prev
+    left: 0px
+  .nav-next
+    right: 0px
+  .team__item_overlay
+    padding: 0 10px
+    box-sizing: border-box
+  .team_container
+    justify-content: space-around
+  .team__item
+    width: 210px
+    height: 240px
+  .team__social_links
+    width: auto
+    padding: 0
+  .social_links.team_links
+    width: 60px
+    display: flex
+    align-items: center
+@media screen and (max-width: 768px)
+  .team__item_overlay
+    height: 90px
+  .team__item
+    width: 190px
+    height: 230px
+  .slick-slide
+    margin: 0px 20px
+  .team__item_description
+    padding: 0
+    display: flex
+    align-items: center
+  .team__item:nth-child(3n), .menu, .navigation_social_links
+    display: none
+@media screen and (max-width: 480px)
+  .slick-slide
+    margin: 0 40px
+  .nav-prev
+    left: 10px
+  .nav-next
+    right: 10px
+  .team__item:nth-child(2n)
+    display: none
+

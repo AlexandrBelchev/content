@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.quote {
+  background: #39a38f;
+  padding: 74px 0 58px 0;
+  color: #fff; }
+  .quote__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .quote__author {
+    width: 100%;
+    font-size: 18px;
+    padding-top: 44px;
+    position: relative; }
+  .quote__name:before {
+    content: "";
+    height: 1px;
+    width: 108px;
+    position: absolute;
+    background: #fff;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 24px; }
+
+.blockquote {
+  margin: 0;
+  font-size: 21px;
+  text-align: center;
+  position: relative;
+  max-width: 780px; }
+  .blockquote:after, .blockquote:before {
+    content: '\“';
+    font-size: 179px;
+    line-height: 179px;
+    position: absolute;
+    opacity: .2; }
+  .blockquote:after {
+    top: 45px;
+    right: 84px; }
+  .blockquote:before {
+    top: -52px;
+    left: -50px; }
+
+@media screen and (max-width: 992px) {
+  .blockquote {
+    max-width: 670px; }
+    .blockquote:after {
+      right: -20px; } }
+
+@media screen and (max-width: 768px) {
+  .blockquote {
+    padding: 0 32px; }
+    .blockquote:after, .blockquote:before {
+      font-size: 119px;
+      line-height: 119px; }
+  .blockquote:after {
+    top: 138px;
+    right: 130px; }
+  .blockquote:before {
+    left: 51px;
+    top: -22px; } }
+
+@media screen and (max-width: 480px) {
+  .blockquote {
+    padding: 0 10px; }
+    .blockquote:after, .blockquote:before {
+      font-size: 119px;
+      line-height: 119px; }
+  .blockquote:after {
+    top: 138px;
+    right: 60px; }
+  .blockquote:before {
+    left: 0px;
+    top: -28px; }
+  .blockquote {
+    font-size: 18px; } }
+
+@media screen and (max-width: 320px) {
+  .blockquote:before {
+    left: -10px;
+    top: -30px; }
+  .blockquote:after {
+    top: 158px;
+    right: 80px; } }

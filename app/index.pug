@@ -31,8 +31,8 @@ html(lang='en')
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
         title Roran template
     body
-        header
-            .container.header_container
+        header.header
+            .container.header__container
                 .header__content
                     .header__content_left_part
                         h1.header__title Roran
@@ -44,7 +44,7 @@ html(lang='en')
                             | Free to download
                             br
                             | at lunartemplates.com
-                .main-arrow
+                .header-arrow
                     a(href='.about')
                         img(src='img/arrow3.png' alt='')
         section.main__menu
@@ -90,7 +90,7 @@ html(lang='en')
                                 p.lorem__heading=lorem.lorem__heading
                                     span.lorem_attention=lorem.lorem_span
                                 p.lorem__description #{lorem_desc}
-            .numbers
+            .about__numbers.number
                 .container.numbers_container
                     - let socials = [{span: '1085', p: 'Empty cups'},{span: '102', p: 'Happy clients'},{span: '25', p: 'BBQ meetings'},{span: '29', p: 'Cocktail parties'},]
                     each social, i in socials
@@ -100,7 +100,7 @@ html(lang='en')
                             .number__description
                                 span.number__item_number=social.span
                                 p.number__item_text=social.p
-            .clients
+            .about__clients.clients
                 .container
                     .clients__heading
                         h2.heading Some of our clients
@@ -118,7 +118,7 @@ html(lang='en')
             .container
                 .services__heading
                     h2.heading Our Services
-                .services__second_heading
+                .services__second_heading.second_heading
                     span With Passion &amp; Experience
                 .services_content
                     -for(let i = 1; i < 7; i++ )
@@ -147,7 +147,7 @@ html(lang='en')
                 .container
                     .team__heading
                         h2.heading Meet...the team
-                    .team__second_heading
+                    .team__second_heading.second_heading
                         span They are really nice!
             .team_content
                 .container.team_container
@@ -169,7 +169,7 @@ html(lang='en')
                 .portfolio__top_content
                     .portfolio__heading
                         h2.heading Portfolio
-                    .portfolio__second_heading
+                    .portfolio__second_heading.second_heading
                         span This is what we’ve been working on
             .portfolio__gallery(data-js='hero-demo')
                 .filters.button_group.js-radio-button-group
@@ -190,7 +190,7 @@ html(lang='en')
                     .element-item.portfolio-clip.web(data-category='web')
                         img(src='img/portfolio-0.png', alt='')
                         .portfolio__item_description
-                            img.portfolio__item_caption(src='img/portfolio-icon1.png')
+                            img.portfolio__item_caption(src='img/portfolio-icon1.png', alt='')
                             span.portfolio__item_heading Free Website PSD
                             p Web
                     .element-item.web(data-category='web')
@@ -203,7 +203,7 @@ html(lang='en')
                 .contact__top_content
                     .contact__heading
                         h2.heading Contact
-                    .contact__second_heading
+                    .contact__second_heading.second_heading
                         span We would really love to hear from you!
             .contact__content
                 .container__text

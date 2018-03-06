@@ -1,0 +1,54 @@
+.container
+  margin: 0 15px
+.container__form
+  margin: 0
+.heading
+  font-size: 27px
+  font-weight: 900
+  line-height: 27px
+.footer__container, .header, .header__content, .navigation, .form__label, .numbers_container, .lorem, .team_container, .menu, .social_links ul
+  display: flex
+  justify-content: space-between
+.clients, .about__lorem, .about__numbers, .services,  .quote, .portfolio, .contact, .about__heading_2, .services__heading, .quote__author, .team__heading, .portfolio__heading, .contact__heading, .contact__form_right_part, .portfolio__item_description, .portfolio-clip, .number__item, .services_content, .team__top_content, .team__item_overlay, .portfolio__tabs, .portfolio-content__part1, .portfolio-content__part2
+  display: flex
+  justify-content: space-around
+.about__heading_2, .services__heading, .quote__author, .team__heading, .portfolio__heading, .contact__heading, .second_heading
+  text-align: center
+.services__heading, .team__heading, .portfolio__heading
+  color: #303030
+.second_heading
+  font-size: 21px
+  position: relative
+  padding-top: 7px
+  display: flex
+  justify-content: center
+  &:after
+    content: ""
+    position: absolute
+    height: 1px
+    width: 108px
+    background: #d8d8d8
+    bottom: -23px
+    display: flex
+    left: 50%
+    transform: translateX(-50%)
+@media screen and (min-width: 1200px)
+  .container
+    width: 1100px
+@media screen and (max-width: 1200px)
+  .container
+    width: 940px
+@media screen and (max-width: 992px)
+  .container, .container__form
+    width: 760px
+@media screen and (max-width: 768px)
+  .container
+    width: 470px
+@media screen and (max-width: 480px)
+  .container
+    width: 320px
+  .second_heading
+    font-size: 18px
+@media screen and (max-width: 320px)
+  .container
+    width: 310px

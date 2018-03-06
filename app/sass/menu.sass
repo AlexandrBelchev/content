@@ -1,0 +1,93 @@
+.logo__text
+  font-size: 30px
+  font-weight: 900
+  color: #303030
+  &:after
+    content: "."
+    color: #39a38f
+.navigation
+  align-items: center
+.main__menu
+  display: flex
+  align-items: center
+  justify-content: space-around
+  border-bottom: 1px solid #dfdfdf
+  box-sizing: border-box
+  height: 65px
+.nav_link, .menu__item
+  color: #c0c0c0
+  &:hover
+    color: #000
+.social_links
+  width: 100px
+.menu.menu_active
+  background-color: #fff
+  text-transform: uppercase
+  width: 250px
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 100
+  align-items: center
+  font-size: 18px
+  padding-top: 64px
+  display: none
+  box-shadow: 0 3px 6px rgba(0,0,0,1), 0 3px 6px rgba(0,0,0,0.23)
+.menu.menu_active
+  display: block
+.menu
+  width: 474px
+  position: relative
+  &__hamburger
+    width: 25px
+    height: 18px
+    position: relative
+    display: none
+    z-index: 9999
+  &__hamburger__item
+    height: 4px
+    background: #39a38f
+    width: 25px
+    -webkit-transition: transform 0.3s
+    -o-transition: transform 0.3s
+    transition: transform 0.3s
+    position: absolute
+  &__hamburger__item:nth-child(1)
+    top: 0px
+  &__hamburger__item:nth-child(2)
+    top: 7px
+  &__hamburger__item:nth-child(3)
+    top: 14px
+  &__hamburger.active
+    right: 70px
+    position: fixed
+    top: 25px
+    right: 200px
+
+.menu.menu_active .navigation__item
+  border-bottom: 1px solid #39a38f
+.menu.menu_active .navigation__item:first-child
+  border-top: 1px solid #39a38f
+.menu.menu_active .menu__item
+  color: #39a38f
+  display: flex
+  width: 100%
+  justify-content: center
+  align-items: center
+  height: 45px
+  &:hover
+    color: #fff
+    background: #39a38f
+
+.menu__hamburger.active .menu__hamburger__item:nth-child(1)
+  transform: rotate(45deg) translateY(10px)
+.menu__hamburger.active .menu__hamburger__item:nth-child(2)
+  opacity: 0
+  transform: scale(0.1)
+.menu__hamburger.active .menu__hamburger__item:nth-child(3)
+  transform: rotate(-45deg) translateY(-10px)
+
+@media screen and (max-width: 768px)
+  .menu__hamburger
+    display: flex

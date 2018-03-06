@@ -1,0 +1,86 @@
+.quote
+  background: #39a38f
+  padding: 74px 0 58px 0
+  color: #fff
+  &__container
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+  &__author
+    width: 100%
+    font-size: 18px
+    padding-top: 44px
+    position: relative
+  &__name
+    &:before
+      content: ""
+      height: 1px
+      width: 108px
+      position: absolute
+      background: #fff
+      left: 50%
+      transform: translateX(-50%)
+      top: 24px
+
+.blockquote
+  margin: 0
+  font-size: 21px
+  text-align: center
+  position: relative
+  max-width: 780px
+  &:after, &:before
+    content: '\“'
+    font-size: 179px
+    line-height: 179px
+    position: absolute
+    opacity: .2
+  &:after
+    top: 45px
+    right: 84px
+  &:before
+    top: -52px
+    left: -50px
+@media screen and (max-width: 992px)
+  .blockquote
+    max-width: 670px
+    &:after
+      right: -20px
+@media screen and (max-width: 768px)
+  .blockquote
+    padding: 0 32px
+    &:after, &:before
+      font-size: 119px
+      line-height: 119px
+  .blockquote
+    &:after
+      top: 138px
+      right: 130px
+  .blockquote
+    &:before
+      left: 51px
+      top: -22px
+@media screen and (max-width: 480px)
+  .blockquote
+    padding: 0 10px
+    &:after, &:before
+      font-size: 119px
+      line-height: 119px
+  .blockquote
+    &:after
+      top: 138px
+      right: 60px
+  .blockquote
+    &:before
+      left: 0px
+      top: -28px
+  .blockquote
+    font-size: 18px
+@media screen and (max-width: 320px)
+  .blockquote
+    &:before
+      left: -10px
+      top: -30px
+  .blockquote
+    &:after
+      top: 158px
+      right: 80px

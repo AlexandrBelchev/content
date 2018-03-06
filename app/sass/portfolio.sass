@@ -1,0 +1,73 @@
+.portfolio
+  flex-wrap: wrap
+  padding-top: 57px
+  color: #979797
+  &__top_content
+    padding-bottom: 75px
+  &__item
+    color: #fff
+    position: relative
+  &__item_caption
+    height: 47px
+    width: 45px
+    padding-bottom: 20px
+  &-clip
+    align-items: center
+    flex-wrap: wrap
+  &__item_description
+    position: absolute
+    width: 180px
+    align-items: center
+    flex-wrap: wrap
+    top: 50%
+    color: #fff
+    transform: translateY(-50%)
+  &__item_heading
+    font-size: 18px
+    font-weight: 900
+  &__gallery
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+.gallery_button
+  background: none
+  border: none
+  color: #959595
+  font-size: 16px
+.filters_wrap
+  width: 500px
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+.button_group
+  display: flex
+  justify-content: center
+  width: 100%
+@media screen and (min-width: 1200px)
+  .portfolio__galery, .grid
+    width: 1200px
+@media screen and (max-width: 1199px)
+  .portfolio__galery, .grid
+    width: 900px
+@media screen and (max-width: 992px)
+  .portfolio__galery, .grid
+    width: 600px
+@media screen and (max-width: 768px)
+  .portfolio__galery, .grid
+    width: 470px
+  .portfolio__galery, .grid
+    width: 300px
+  .portfolio__item_heading
+    font-size: 16px
+  .portfolio__item_caption
+    height: 37px
+    width: 35px
+@media screen and (max-width: 480px)
+  .portfolio__galery, .grid
+    width: 300px
+  .gallery_button
+    margin-bottom: 10px
+  .button_group
+    flex-wrap: wrap
+    width: 290px
